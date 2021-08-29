@@ -43,9 +43,10 @@ I use some extensions, some are public extensions, some are mine, some are modif
 - If you want to add content later,  just add a `todo` tag in the front matter. 
 2. Review a topic/notes
 
-- Notes are organized by topics. Open search and search for tag you want to review. Press `Ctrl+Tab` to view random from search result. 
+- Notes are organized by topics. Open search and search for tag you want to review. Press `Ctrl+Tab` to view a random note from your search result. 
 - Every month, a monthly note is created under `notes/monthly` folder. You can review list of notes linked to it.
 - Any new note should add a `review` tag and remove it as soon as you think it's good enough. To visit a note that need to be reviewed, enter `Ctrl+R` or exec command `Spaced Repetition: Open a note for review`.
+
 3 Track your reading
 
 - I created two Kanban boards to track my regular reading and book reading. I think it really helps when you have multiple things in your reading list.  Again, don't trust your memory.
@@ -100,6 +101,8 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
 
 If you wanted to know more about Zettelkasten method, I recommend book [How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking – for Students, Academics and Nonfiction Book Writers](https://www.amazon.com/gp/product/1542866502/) as a good start.
 
-Happy learning :) .
+Happy learning :).
+
 ## License
+
 [MIT](LICENSE)
