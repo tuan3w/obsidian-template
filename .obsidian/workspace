@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
             "mode": "source"
           }
         }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -228,15 +228,15 @@
   },
   "active": "b88c199b14c2a2e1",
   "lastOpenFiles": [
-    "README.md",
     "notes/books/20210829094148 - (Book) Range - Why generlists Why Generalists Triumph in a Specialized World.md",
-    "screenshots/anki.png",
+    "notes/books/20210829094933 - (Book) The war of art.md",
+    "notes/typography/20210829093905 - Typeface (typography).md",
     "notes/typography/20210829093738 - Kerning (typography).md",
+    "README.md",
+    "screenshots/anki.png",
     "notes/uncategorized/20210829094555 - Todo term.md",
     "notes/(Kanban) Reading list.md",
     "notes/(Kanban) Books.md",
-    "notes/books/20210829094148 - Range - Why generlists Why Generalists Triumph in a Specialized World.md",
-    "notes/monthly/2021-08.md",
-    "notes/books/20210829094933 - (Book) The war of art.md"
+    "notes/books/20210829094148 - Range - Why generlists Why Generalists Triumph in a Specialized World.md"
   ]
 }
