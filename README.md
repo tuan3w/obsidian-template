@@ -68,10 +68,15 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
  It will add all the new notes, update note stats, generate a picture of your progress and create new commit with your message. Your stats will look like this:
  ![stats](stats.png)
 ### Screenshots
+- Edit mode:
 ![edit-mode](screenshots/edit-mode.png)
+- Preview mode:
 ![preview-mode](screenshots/preview-mode.png)
+- Front matter:
 ![front-matter](screenshots/front-matter.png)
+- Monthly note:
 ![monthly-note](screenshots/monthly-note.png)
+- Kanban board:
 ![Kanban](screenshots/kanban.png)
 ## FAQs
 If you wanted to know more about Zettelkasten method, I recommend book [How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking – for Students, Academics and Nonfiction Book Writers](https://www.amazon.com/gp/product/1542866502/) as a good start.
