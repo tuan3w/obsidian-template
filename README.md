@@ -5,7 +5,7 @@ My personal templates for  [Obsidian](https://obsidian.md).
 I started new note-taking method after reading an interesting post about Zettelkasten method in [Hacker News](https://news.ycombinator.com/item?id=25803132). For many years, I was struggling about how to organizing my reading list as well as what I learned. I tried many tools & approaches like using Pocket, using browser bookmark, Medium, Trello, Twitter likes,... Nothing worked. I kept forgetting about what I has read. Our memory isn't reliable as we might think. Building Second Brain idea has changed the way I learn. Obsidian is my favorite tool to build it. I keep changing how I get the most out of Obsidian.
 
 I would love to share my templates with others, who are interested in learning and want to organizing your learning process better. 
-## What is inside the template ?
+## What is inside this template ?
 ### Theme
 I creates modified version of Dracula theme. It has better line-spacing between heading and content, better front matter styling, better font-scale so you can have better writing experience.
 Here is the screenshot of the main screen:
@@ -96,6 +96,9 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
 
 - Kanban board:
 ![Kanban](screenshots/kanban.png)
+
+- Anki deck list:
+![anki-desk](screenshots/anki-card.png)
 
 ## FAQs
 
