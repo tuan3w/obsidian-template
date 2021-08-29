@@ -66,7 +66,7 @@ I use some extensions, some are public extensions, some are mine, some are modif
 6. Virtual Assistant
 
 
-I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-client). I love the works by Paul Bricman. AI assistants will be an powerful tool to support us to exploring ideas in our modern world. Just follow the guide if you want to try it.
+I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-client). I love the works by Paul Bricman. AI assistants will be an powerful tools to support us to exploring new ideas in our modern world. Just follow the guide if you want to try it.
 
 7. Hot keys
 
