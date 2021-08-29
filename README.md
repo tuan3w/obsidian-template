@@ -47,7 +47,7 @@ I use some extensions, some are public extensions, some are mine, some are modif
 - Every month, a monthly note is created under `notes/monthly` folder. You can review list of notes linked to it.
 - Any new note should add a `review` tag and remove it as soon as you think it's good enough. To visit a note that need to be reviewed, enter `Ctrl+R` or exec command `Spaced Repetition: Open a note for review`.
 
-3 Track your reading
+3. Track your reading
 
 - I created two Kanban boards to track my regular reading and book reading. I think it really helps when you have multiple things in your reading list.  Again, don't trust your memory.
 
