@@ -60,14 +60,14 @@ I use some extensions, some are public extensions, some are mine, some are modif
 	- Book: `(Book) product`
 5. Anki card
 
-- Overtime, you will create new cluster of knowledge. You might want to review this topic using  better way than visiting them randomly. So [Anki is your friend].(https://aliabdaal.com/spaced-repetition/) . Creating new anki deck is simple enough:
+- Overtime, you will create new cluster of knowledge. You might want to review this topic using  better way than visiting them randomly. So [Anki is your friend](https://aliabdaal.com/spaced-repetition/). Creating new anki deck is simple enough:
 	- Add new desk: Add tag about topic in [Spaced repetition plugin setting](https://github.com/st3v3nmw/obsidian-spaced-repetition). I prefer this approach more than turning folder name into deck name because it provides more better control.
 	- Add new card: I only used [multiple-line card style](https://github.com/st3v3nmw/obsidian-spaced-repetition/wiki/Flashcard-Types#multi-line-basic) . I choose  `[ ](#anki-card)`  as separator because it's invisible in preview mode.  To add separator, just use template `Create Anki Card` to insert the separator after the first heading of the note. By default, `Term` card is an anki card. 
 
 6. Virtual Assistant
 
 
-I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-client). I love the works by Paul Bricman. AI assistants will be an powerful tools to support us to exploring new ideas in our modern world. Just follow the guide if you want to try it.
+I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-client). I love the works by Paul Bricman. AI assistants will be powerful tools to support us to exploring new ideas in our modern world. Just follow the guide if you want to try it.
 
 7. Hot keys
 
