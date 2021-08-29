@@ -1,0 +1,242 @@
+{
+  "main": {
+    "id": "863551197086b1be",
+    "type": "split",
+    "children": [
+      {
+        "id": "b88c199b14c2a2e1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1056d052d9d1486e",
+    "type": "split",
+    "children": [
+      {
+        "id": "97d06fa14281b982",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08a20692f1bf5ffb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "fbb5b38869b604a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "2c391920b7291288",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "aa8052c3b1e96e1d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 301
+  },
+  "right": {
+    "id": "8f5eec4ed7a6a453",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0963d3d2d72e12f",
+        "type": "tabs",
+        "dimension": 71.30559540889527,
+        "children": [
+          {
+            "id": "320262d294a7ea5b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "82968f8f767f3d36",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "58ec04b5b4cb18d9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "3247bbff4e97388a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          },
+          {
+            "id": "ee4ec288cf0688d7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "e2bc756143da0af8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "bdfaab372ed69e76",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "7e87b110132f46f2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "8a501e4c5afbe9b9",
+            "type": "leaf",
+            "state": {
+              "type": "chat",
+              "state": {}
+            }
+          },
+          {
+            "id": "2ffff229abc6da53",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "fb7584ac7010d526",
+        "type": "tabs",
+        "dimension": 28.694404591104735,
+        "children": [
+          {
+            "id": "9b516c25052be5df",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "README.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.19629981813994257,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 340.5,
+    "collapsed": true
+  },
+  "active": "b88c199b14c2a2e1",
+  "lastOpenFiles": [
+    "README.md",
+    "notes/books/20210829094148 - (Book) Range - Why generlists Why Generalists Triumph in a Specialized World.md",
+    "screenshots/anki.png",
+    "notes/typography/20210829093738 - Kerning (typography).md",
+    "notes/uncategorized/20210829094555 - Todo term.md",
+    "notes/(Kanban) Reading list.md",
+    "notes/(Kanban) Books.md",
+    "notes/books/20210829094148 - Range - Why generlists Why Generalists Triumph in a Specialized World.md",
+    "notes/monthly/2021-08.md",
+    "notes/books/20210829094933 - (Book) The war of art.md"
+  ]
+}

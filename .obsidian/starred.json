@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "20210315070246 - Mental model list",
+      "path": "20210315070246 - Mental Model List (Resource).md"
+    },
+    {
+      "type": "file",
+      "title": "20210128080939 - 2021 Reading List",
+      "path": "20210128080939 - 2021 Reading List.md"
+    },
+    {
+      "type": "file",
+      "title": "20210522092507 - blockly thoughts",
+      "path": "blockly/20210522092507 - Blockly thoughts.md"
+    },
+    {
+      "type": "file",
+      "title": "20210204171022 - Cognitive biases (mental models)",
+      "path": "20210204171022 - Cognitive biases (mental models).md"
+    },
+    {
+      "type": "file",
+      "title": "Web",
+      "path": "notes/daily/Web.md"
+    },
+    {
+      "type": "file",
+      "title": "20210315070246 - Mental Model List (Resource)",
+      "path": "notes/psychology/mental model/20210315070246 - Mental Model List (Resource).md"
+    },
+    {
+      "type": "file",
+      "title": "20210526090856 - Logical Fallacies (list)",
+      "path": "notes/psychology/mental model/20210526090856 - Logical Fallacies (list).md"
+    },
+    {
+      "type": "file",
+      "title": "20210522092507 - Blockly thoughts",
+      "path": "notes/blockly/20210522092507 - Blockly thoughts.md"
+    },
+    {
+      "type": "file",
+      "title": "20210320211713 - Law Of UX (list)",
+      "path": "notes/design/20210320211713 - Law Of UX (list).md"
+    },
+    {
+      "type": "file",
+      "title": "2021-06",
+      "path": "notes/monthly/2021-06.md"
+    },
+    {
+      "type": "file",
+      "title": "20210804084812 - Self  notes - 2021-07",
+      "path": "notes/self/20210804084812 - Self  notes - 2021-07.md"
+    },
+    {
+      "type": "file",
+      "title": "20210828022843 - History of various technologies",
+      "path": "notes/tech/general/20210828022843 - History of various technologies (resource).md"
+    }
+  ]
+}

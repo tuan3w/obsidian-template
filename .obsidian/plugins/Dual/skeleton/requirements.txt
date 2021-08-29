@@ -1,0 +1,14 @@
+regex==2020.10.15
+click==7.1.2
+tqdm==4.50.2
+joblib==0.17.0
+six==1.15.0
+Flask==1.1.2
+beautifulsoup4==4.9.3
+flask_cors==3.0.10
+Markdown==3.3.4
+PyInstaller==4.2
+python_frontmatter==1.0.0
+sentence_transformers==1.0.4
+torch==1.8.1
+transformers==4.5.0

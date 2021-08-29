@@ -1,0 +1,20 @@
+a[href="https://www.buymeacoffee.com/phibr0"] > img {
+    height: 2.2em;
+}
+
+a[href="https://www.buymeacoffee.com/phibr0"]{
+    transform: translate(0, 5%);
+}
+
+.ES-suggester-container {
+    display: flex;
+    place-content: space-between;
+}
+
+.ES-shortcode {
+    margin-right: 8px;
+}
+
+.ES-suggestion-item {
+    padding-left: 10px;
+}

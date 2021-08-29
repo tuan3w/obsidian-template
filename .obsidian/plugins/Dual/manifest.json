@@ -1,0 +1,9 @@
+{
+	"id": "dual-obsidian",
+	"name": "Dual",
+	"version": "0.1",
+	"minAppVersion": "0.9.12",
+	"author": "Psionica",
+	"authorUrl": "https://psionica.org",
+	"isDesktopOnly": true
+}

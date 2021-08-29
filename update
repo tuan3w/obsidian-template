@@ -1,0 +1,6 @@
+#!/bin/bash
+
+python3 update_stats.py
+git add .
+git commit -a -m "$*"
+git push

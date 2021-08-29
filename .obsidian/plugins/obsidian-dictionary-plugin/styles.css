@@ -1,0 +1,30 @@
+.setting-item.extra > .setting-item-info {
+    opacity: 0.65;
+}
+
+a[href="https://www.buymeacoffee.com/phibr0"] > img {
+    height: 2.2em;
+}
+
+a[href="https://www.buymeacoffee.com/phibr0"]{
+    transform: translate(0, 5%);
+}
+
+.dictionaryprefixsuffix .setting-item-control input{
+    margin-left: 0.5rem;
+}
+
+.dictionarytextarea .setting-item-control textarea{
+    height: 15em;
+    width: 100%;
+    resize: vertical;
+}
+
+.dictionarycenter{
+    text-align: center;
+}
+
+.dictionarybuttons{
+    display: flex;
+    place-content: center;
+}
