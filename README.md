@@ -5,7 +5,7 @@ My personal templates for  [Obsidian](https://obsidian.md).
 I started new note-taking method after reading an interesting post about Zettelkasten method in [Hacker News](https://news.ycombinator.com/item?id=25803132). For many years, I was struggling about how to organizing my reading list as well as what I learned. I tried many tools & approaches like using Pocket, using browser bookmark, Medium, Trello, Twitter likes,... Nothing worked. I kept forgetting about what I has read. Our memory isn't reliable as we might think. Building Second Brain idea has changed the way I learn. Obsidian is my favorite tool to build it. I keep changing how I get the most out of Obsidian.
 
 I would love to share my templates with others, who are interested in learning and want to organizing your learning process better. 
-## What is inside the template ?
+## What is inside this template ?
 ### Theme
 I creates modified version of Dracula theme. It has better line-spacing between heading and content, better front matter styling, better font-scale so you can have better writing experience.
 Here is the screenshot of the main screen:
@@ -48,7 +48,7 @@ I use some extensions, some are public extensions, some are mine, some are modif
 - Every month, a monthly note is created under `notes/monthly` folder. You can review list of notes linked to it.
 - Any new note should add a `review` tag and remove it as soon as you think it's good enough. To visit a note that need to be reviewed, enter `Ctrl+R` or exec command `Spaced Repetition: Open a note for review`.
 
-3 Track your reading
+3. Track your reading
 
 - I created two Kanban boards to track my regular reading and book reading. I think it really helps when you have multiple things in your reading list.  Again, don't trust your memory.
 
@@ -75,7 +75,7 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
  I use a number of hot keys to make quick actions. You can see them in `Hotkeys` section in the setting. 
  
  ### Automatic gather our ideas
- I use DataView plugin to create automatic list. For example, you can use Dataview to gather all your ideas in one place. See [example](20210903091505 - My thoughts (resource).md).
+ I use DataView plugin to create automatic list. For example, you can use DataView to gather all your ideas in one place. See [example](20210903091505 - My thoughts (resource).md).
  However, the downside of this approach is that the all the links won't be displayed in graph view. So you might consider manual linking if you need that.
 ### Stats tracking (optional)
  I also provide some [script](./update_stats.py) to update your reading stats (how many notes you have taken over time). Everytime you want to update git, just run command:
@@ -104,6 +104,9 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
 
 - Idea center:
 ![Idea center](screenshots/idea-center.png)
+
+- Anki deck list:
+![anki-desk](screenshots/anki-card.png)
 
 ## FAQs
 
