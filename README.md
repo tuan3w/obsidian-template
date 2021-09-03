@@ -33,6 +33,7 @@ I use some extensions, some are public extensions, some are mine, some are modif
 - Markdown prettifier (modified):  Fix and reformat your markdown notes, keep it clean, add modified date to your notes.
 - [Smart Random Note](https://github.com/erichalldev/obsidian-smart-random-note) : Random visit notes from your search result.
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler): rename, merge, search tags from Obsidian tag pane.
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview/): Creates automatic lists, tables from our notes.
 ### Taking notes tips
 1. Creating notes
 
@@ -72,6 +73,10 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
 7. Hot keys
 
  I use a number of hot keys to make quick actions. You can see them in `Hotkeys` section in the setting. 
+ 
+ ### Automatic gather our ideas
+ I use DataView plugin to create automatic list. For example, you can use Dataview to gather all your ideas in one place. See [example](20210903091505 - My thoughts (resource).md).
+ However, the downside of this approach is that the all the links won't be displayed in graph view. So you might consider manual linking if you need that.
 ### Stats tracking (optional)
  I also provide some [script](./update_stats.py) to update your reading stats (how many notes you have taken over time). Everytime you want to update git, just run command:
  ```bash
@@ -96,6 +101,9 @@ I do explore [Dual assistant plugin](https://github.com/Psionica/dual-obsidian-c
 
 - Kanban board:
 ![Kanban](screenshots/kanban.png)
+
+- Idea center:
+![Idea center](screenshots/idea-center.png)
 
 ## FAQs
 
