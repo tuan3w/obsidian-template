@@ -2,13 +2,11 @@
 id: {{date:YYYYMMDDHHmmss}}
 created_date: {{date:DD/MM/YYYY}}
 updated_date: {{date:DD/MM/YYYY}}
-tags: 
-  - review
-  - company
 
 ---
 
 #  {{title}}
+- **🏷️Tags** :  #{{date:MM-YYYY}}, #company, #review
 [ ](#anki-card)
 ## 📝 Notes
 - 
