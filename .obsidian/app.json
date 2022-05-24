@@ -197,9 +197,9 @@
     "DataView"
   ],
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "notes/assets",
+  "attachmentFolderPath": "assets",
   "newFileLocation": "folder",
-  "newFileFolderPath": "notes",
+  "newFileFolderPath": "notes/uncategorized",
   "vimMode": false,
   "showLineNumber": false,
   "legacyEditor": false,
