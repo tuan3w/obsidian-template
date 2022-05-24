@@ -1,6 +1,9 @@
 {
-  "baseFontSize": 13,
-  "cssTheme": "dracula",
+  "baseFontSize": 18,
+  "cssTheme": "Minimal",
   "translucency": false,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "heading-size"
+  ]
 }

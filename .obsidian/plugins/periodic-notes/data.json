@@ -14,8 +14,18 @@
   },
   "monthly": {
     "format": "",
-    "template": "notes/templates/monthly/Montly Note.md",
+    "template": "templates/monthly/Montly Note.md",
     "folder": "notes/monthly",
     "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
   }
 }

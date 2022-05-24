@@ -1,42 +1,91 @@
 /* lists */
-.outliner-plugin-bls .cm-s-obsidian .HyperMD-list-line {
-  padding-top: 0.4em;
+.outliner-plugin-better-lists .cm-s-obsidian .HyperMD-list-line {
+  padding-top: 8px;
 }
 
 /* bullets */
-.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list {
-  letter-spacing: 3px;
-}
-
-.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul {
-  color: var(--background-primary) !important;
-}
-
-.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
+.outliner-plugin-better-bullets
+  .cm-s-obsidian:not(.is-live-preview)
+  .cm-formatting-list-ul:before,
+.outliner-plugin-better-bullets
+  .cm-s-obsidian.is-live-preview
+  .list-bullet:before {
+  visibility: visible;
   content: "•";
+  font-size: 150%;
   position: absolute;
+  margin-top: -6px;
   margin-left: -3px;
-  margin-top: -5px;
-  font-size: 24px;
   color: var(--text-muted);
-  visibility: visible !important;
+}
+
+.outliner-plugin-better-bullets
+  .cm-s-obsidian.is-live-preview
+  .list-bullet::after {
+  content: none;
 }
 
 /* lines */
-.outliner-plugin-bls .cm-hmd-list-indent .cm-tab {
-  position: relative;
-}
-
-.outliner-plugin-bls .cm-hmd-list-indent .cm-tab::before {
-  content: "";
-  border-left: 1px solid var(--text-faint);
+.outliner-plugin-list-lines-scroller {
   position: absolute;
-  left: 3px;
-  top: -9px;
-  bottom: -9999px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  padding-left: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.outliner-plugin-bls .cm-s-obsidian .CodeMirror-line {
+.outliner-plugin-list-lines-content-container {
   position: relative;
-  overflow: hidden;
+}
+
+.outliner-plugin-list-line {
+  pointer-events: auto;
+  position: absolute;
+  width: 5px;
+  margin-left: 0.5ch;
+  margin-top: 1.8em;
+  z-index: 1;
+  cursor: pointer;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--text-faint) 1px,
+    transparent 1px
+  );
+  background-position-x: 2px;
+  background-repeat: no-repeat;
+}
+
+.outliner-plugin-better-bullets .outliner-plugin-list-line {
+  margin-top: 2em;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .outliner-plugin-list-lines-content-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.markdown-source-view.mod-cm6.is-folding .outliner-plugin-list-line {
+  margin-left: 14px;
+}
+
+.outliner-plugin-better-bullets
+  .markdown-source-view.mod-cm6.is-folding
+  .outliner-plugin-list-line {
+  margin-left: 15px;
+}
+
+.outliner-plugin-list-line:hover {
+  background: var(--text-faint);
+}
+
+.outliner-plugin-vertical-lines
+  .markdown-source-view.mod-cm6
+  .cm-indent::before {
+  content: none;
 }

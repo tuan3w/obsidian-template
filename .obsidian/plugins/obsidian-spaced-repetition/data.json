@@ -11,7 +11,8 @@
     "flashcardWidthPercentage": 80,
     "showFileNameInFileLink": false,
     "randomizeCardOrder": true,
-    "disableClozeCards": true,
+    "convertHighlightsToClozes": true,
+    "convertBoldTextToClozes": false,
     "singlelineCardSeparator": "::",
     "singlelineReversedCardSeparator": ":::",
     "multilineCardSeparator": "[ ](#anki-card)",
@@ -20,7 +21,7 @@
       "#review"
     ],
     "noteFoldersToIgnore": [
-      "notes/templates"
+      "templates"
     ],
     "openRandomNote": false,
     "autoNextNote": true,
@@ -31,23 +32,25 @@
     "easyBonus": 1.3,
     "maximumInterval": 36525,
     "maxLinkFactor": 1,
+    "showDebugMessages": false,
+    "disableClozeCards": true,
     "logLevel": 1
   },
-  "buryDate": "2021-09-03",
+  "buryDate": "2022-05-24",
   "buryList": [],
   "cache": {
     "notes/typography/20210829093905 - Typeface (typography).md": {
       "totalCards": 1,
       "hasNewCards": true,
       "nextDueDate": "",
-      "lastUpdated": 1630204789883,
+      "lastUpdated": 1643360703607,
       "dueDatesFlashcards": {}
     },
     "notes/typography/20210829093738 - Kerning (typography).md": {
       "totalCards": 1,
       "hasNewCards": true,
       "nextDueDate": "",
-      "lastUpdated": 1630204697432,
+      "lastUpdated": 1643360703607,
       "dueDatesFlashcards": {}
     }
   }

@@ -16,5 +16,6 @@ a[href="https://www.buymeacoffee.com/phibr0"]{
 }
 
 .ES-suggestion-item {
+    border-top: solid var(--background-secondary) 1px;
     padding-left: 10px;
 }

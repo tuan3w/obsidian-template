@@ -9,6 +9,8 @@ var obsidian__default = /*#__PURE__*/_interopDefaultLegacy(obsidian);
 const DEFAULT_DAILY_NOTE_FORMAT = "YYYY-MM-DD";
 const DEFAULT_WEEKLY_NOTE_FORMAT = "gggg-[W]ww";
 const DEFAULT_MONTHLY_NOTE_FORMAT = "YYYY-MM";
+const DEFAULT_QUARTERLY_NOTE_FORMAT = "YYYY-[Q]Q";
+const DEFAULT_YEARLY_NOTE_FORMAT = "YYYY";
 
 function shouldUsePeriodicNotesSettings(periodicity) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -51,8 +53,7 @@ function getWeeklyNoteSettings() {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const pluginManager = window.app.plugins;
         const calendarSettings = pluginManager.getPlugin("calendar")?.options;
-        const periodicNotesSettings = pluginManager.getPlugin("periodic-notes")
-            ?.settings?.weekly;
+        const periodicNotesSettings = pluginManager.getPlugin("periodic-notes")?.settings?.weekly;
         if (shouldUsePeriodicNotesSettings("weekly")) {
             return {
                 format: periodicNotesSettings.format || DEFAULT_WEEKLY_NOTE_FORMAT,
@@ -92,53 +93,47 @@ function getMonthlyNoteSettings() {
         console.info("No custom monthly note settings found!", err);
     }
 }
-
 /**
- * dateUID is a way of weekly identifying daily/weekly/monthly notes.
- * They are prefixed with the granularity to avoid ambiguity.
+ * Read the user settings for the `periodic-notes` plugin
+ * to keep behavior of creating a new note in-sync.
  */
-function getDateUID(date, granularity = "day") {
-    const ts = date.clone().startOf(granularity).format();
-    return `${granularity}-${ts}`;
-}
-function removeEscapedCharacters(format) {
-    return format.replace(/\[[^\]]*\]/g, ""); // remove everything within brackets
+function getQuarterlyNoteSettings() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const pluginManager = window.app.plugins;
+    try {
+        const settings = (shouldUsePeriodicNotesSettings("quarterly") &&
+            pluginManager.getPlugin("periodic-notes")?.settings?.quarterly) ||
+            {};
+        return {
+            format: settings.format || DEFAULT_QUARTERLY_NOTE_FORMAT,
+            folder: settings.folder?.trim() || "",
+            template: settings.template?.trim() || "",
+        };
+    }
+    catch (err) {
+        console.info("No custom quarterly note settings found!", err);
+    }
 }
 /**
- * XXX: When parsing dates that contain both week numbers and months,
- * Moment choses to ignore the week numbers. For the week dateUID, we
- * want the opposite behavior. Strip the MMM from the format to patch.
+ * Read the user settings for the `periodic-notes` plugin
+ * to keep behavior of creating a new note in-sync.
  */
-function isFormatAmbiguous(format, granularity) {
-    if (granularity === "week") {
-        const cleanFormat = removeEscapedCharacters(format);
-        return (/w{1,2}/i.test(cleanFormat) &&
-            (/M{1,4}/.test(cleanFormat) || /D{1,4}/.test(cleanFormat)));
+function getYearlyNoteSettings() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const pluginManager = window.app.plugins;
+    try {
+        const settings = (shouldUsePeriodicNotesSettings("yearly") &&
+            pluginManager.getPlugin("periodic-notes")?.settings?.yearly) ||
+            {};
+        return {
+            format: settings.format || DEFAULT_YEARLY_NOTE_FORMAT,
+            folder: settings.folder?.trim() || "",
+            template: settings.template?.trim() || "",
+        };
     }
-    return false;
-}
-function getDateFromFile(file, granularity) {
-    const getSettings = {
-        day: getDailyNoteSettings,
-        week: getWeeklyNoteSettings,
-        month: getMonthlyNoteSettings,
-    };
-    const format = getSettings[granularity]().format.split("/").pop();
-    const noteDate = window.moment(file.basename, format, true);
-    if (!noteDate.isValid()) {
-        return null;
+    catch (err) {
+        console.info("No custom yearly note settings found!", err);
     }
-    if (isFormatAmbiguous(format, granularity)) {
-        if (granularity === "week") {
-            const cleanFormat = removeEscapedCharacters(format);
-            if (/w{1,2}/i.test(cleanFormat)) {
-                return window.moment(file.basename, 
-                // If format contains week, remove day & month formatting
-                format.replace(/M{1,4}/g, "").replace(/D{1,4}/g, ""), false);
-            }
-        }
-    }
-    return noteDate;
 }
 
 // Credit: @creationix/path.js
@@ -202,6 +197,59 @@ async function getTemplateInfo(template) {
         new obsidian__default['default'].Notice("Failed to read the daily note template");
         return ["", null];
     }
+}
+
+/**
+ * dateUID is a way of weekly identifying daily/weekly/monthly notes.
+ * They are prefixed with the granularity to avoid ambiguity.
+ */
+function getDateUID(date, granularity = "day") {
+    const ts = date.clone().startOf(granularity).format();
+    return `${granularity}-${ts}`;
+}
+function removeEscapedCharacters(format) {
+    return format.replace(/\[[^\]]*\]/g, ""); // remove everything within brackets
+}
+/**
+ * XXX: When parsing dates that contain both week numbers and months,
+ * Moment choses to ignore the week numbers. For the week dateUID, we
+ * want the opposite behavior. Strip the MMM from the format to patch.
+ */
+function isFormatAmbiguous(format, granularity) {
+    if (granularity === "week") {
+        const cleanFormat = removeEscapedCharacters(format);
+        return (/w{1,2}/i.test(cleanFormat) &&
+            (/M{1,4}/.test(cleanFormat) || /D{1,4}/.test(cleanFormat)));
+    }
+    return false;
+}
+function getDateFromFile(file, granularity) {
+    return getDateFromFilename(file.basename, granularity);
+}
+function getDateFromFilename(filename, granularity) {
+    const getSettings = {
+        day: getDailyNoteSettings,
+        week: getWeeklyNoteSettings,
+        month: getMonthlyNoteSettings,
+        quarter: getQuarterlyNoteSettings,
+        year: getYearlyNoteSettings,
+    };
+    const format = getSettings[granularity]().format.split("/").pop();
+    const noteDate = window.moment(filename, format, true);
+    if (!noteDate.isValid()) {
+        return null;
+    }
+    if (isFormatAmbiguous(format, granularity)) {
+        if (granularity === "week") {
+            const cleanFormat = removeEscapedCharacters(format);
+            if (/w{1,2}/i.test(cleanFormat)) {
+                return window.moment(filename, 
+                // If format contains week, remove day & month formatting
+                format.replace(/M{1,4}/g, "").replace(/D{1,4}/g, ""), false);
+            }
+        }
+    }
+    return noteDate;
 }
 
 class DailyNotesFolderMissingError extends Error {
@@ -344,13 +392,16 @@ function getWeeklyNote(date, weeklyNotes) {
     return weeklyNotes[getDateUID(date, "week")] ?? null;
 }
 function getAllWeeklyNotes() {
+    const weeklyNotes = {};
+    if (!appHasWeeklyNotesPluginLoaded()) {
+        return weeklyNotes;
+    }
     const { vault } = window.app;
     const { folder } = getWeeklyNoteSettings();
     const weeklyNotesFolder = vault.getAbstractFileByPath(obsidian__default['default'].normalizePath(folder));
     if (!weeklyNotesFolder) {
         throw new WeeklyNotesFolderMissingError("Failed to find weekly notes folder");
     }
-    const weeklyNotes = {};
     obsidian__default['default'].Vault.recurseChildren(weeklyNotesFolder, (note) => {
         if (note instanceof obsidian__default['default'].TFile) {
             const date = getDateFromFile(note, "week");
@@ -411,13 +462,16 @@ function getMonthlyNote(date, monthlyNotes) {
     return monthlyNotes[getDateUID(date, "month")] ?? null;
 }
 function getAllMonthlyNotes() {
+    const monthlyNotes = {};
+    if (!appHasMonthlyNotesPluginLoaded()) {
+        return monthlyNotes;
+    }
     const { vault } = window.app;
     const { folder } = getMonthlyNoteSettings();
     const monthlyNotesFolder = vault.getAbstractFileByPath(obsidian__default['default'].normalizePath(folder));
     if (!monthlyNotesFolder) {
         throw new MonthlyNotesFolderMissingError("Failed to find monthly notes folder");
     }
-    const monthlyNotes = {};
     obsidian__default['default'].Vault.recurseChildren(monthlyNotesFolder, (note) => {
         if (note instanceof obsidian__default['default'].TFile) {
             const date = getDateFromFile(note, "month");
@@ -428,6 +482,146 @@ function getAllMonthlyNotes() {
         }
     });
     return monthlyNotes;
+}
+
+class QuarterlyNotesFolderMissingError extends Error {
+}
+/**
+ * This function mimics the behavior of the daily-notes plugin
+ * so it will replace {{date}}, {{title}}, and {{time}} with the
+ * formatted timestamp.
+ *
+ * Note: it has an added bonus that it's not 'today' specific.
+ */
+async function createQuarterlyNote(date) {
+    const { vault } = window.app;
+    const { template, format, folder } = getQuarterlyNoteSettings();
+    const [templateContents, IFoldInfo] = await getTemplateInfo(template);
+    const filename = date.format(format);
+    const normalizedPath = await getNotePath(folder, filename);
+    try {
+        const createdFile = await vault.create(normalizedPath, templateContents
+            .replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+            const now = window.moment();
+            const currentDate = date.clone().set({
+                hour: now.get("hour"),
+                minute: now.get("minute"),
+                second: now.get("second"),
+            });
+            if (calc) {
+                currentDate.add(parseInt(timeDelta, 10), unit);
+            }
+            if (momentFormat) {
+                return currentDate.format(momentFormat.substring(1).trim());
+            }
+            return currentDate.format(format);
+        })
+            .replace(/{{\s*date\s*}}/gi, filename)
+            .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
+            .replace(/{{\s*title\s*}}/gi, filename));
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        window.app.foldManager.save(createdFile, IFoldInfo);
+        return createdFile;
+    }
+    catch (err) {
+        console.error(`Failed to create file: '${normalizedPath}'`, err);
+        new obsidian__default['default'].Notice("Unable to create new file.");
+    }
+}
+function getQuarterlyNote(date, quarterly) {
+    return quarterly[getDateUID(date, "quarter")] ?? null;
+}
+function getAllQuarterlyNotes() {
+    const quarterly = {};
+    if (!appHasQuarterlyNotesPluginLoaded()) {
+        return quarterly;
+    }
+    const { vault } = window.app;
+    const { folder } = getQuarterlyNoteSettings();
+    const quarterlyFolder = vault.getAbstractFileByPath(obsidian__default['default'].normalizePath(folder));
+    if (!quarterlyFolder) {
+        throw new QuarterlyNotesFolderMissingError("Failed to find quarterly notes folder");
+    }
+    obsidian__default['default'].Vault.recurseChildren(quarterlyFolder, (note) => {
+        if (note instanceof obsidian__default['default'].TFile) {
+            const date = getDateFromFile(note, "quarter");
+            if (date) {
+                const dateString = getDateUID(date, "quarter");
+                quarterly[dateString] = note;
+            }
+        }
+    });
+    return quarterly;
+}
+
+class YearlyNotesFolderMissingError extends Error {
+}
+/**
+ * This function mimics the behavior of the daily-notes plugin
+ * so it will replace {{date}}, {{title}}, and {{time}} with the
+ * formatted timestamp.
+ *
+ * Note: it has an added bonus that it's not 'today' specific.
+ */
+async function createYearlyNote(date) {
+    const { vault } = window.app;
+    const { template, format, folder } = getYearlyNoteSettings();
+    const [templateContents, IFoldInfo] = await getTemplateInfo(template);
+    const filename = date.format(format);
+    const normalizedPath = await getNotePath(folder, filename);
+    try {
+        const createdFile = await vault.create(normalizedPath, templateContents
+            .replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+            const now = window.moment();
+            const currentDate = date.clone().set({
+                hour: now.get("hour"),
+                minute: now.get("minute"),
+                second: now.get("second"),
+            });
+            if (calc) {
+                currentDate.add(parseInt(timeDelta, 10), unit);
+            }
+            if (momentFormat) {
+                return currentDate.format(momentFormat.substring(1).trim());
+            }
+            return currentDate.format(format);
+        })
+            .replace(/{{\s*date\s*}}/gi, filename)
+            .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
+            .replace(/{{\s*title\s*}}/gi, filename));
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        window.app.foldManager.save(createdFile, IFoldInfo);
+        return createdFile;
+    }
+    catch (err) {
+        console.error(`Failed to create file: '${normalizedPath}'`, err);
+        new obsidian__default['default'].Notice("Unable to create new file.");
+    }
+}
+function getYearlyNote(date, yearlyNotes) {
+    return yearlyNotes[getDateUID(date, "year")] ?? null;
+}
+function getAllYearlyNotes() {
+    const yearlyNotes = {};
+    if (!appHasYearlyNotesPluginLoaded()) {
+        return yearlyNotes;
+    }
+    const { vault } = window.app;
+    const { folder } = getYearlyNoteSettings();
+    const yearlyNotesFolder = vault.getAbstractFileByPath(obsidian__default['default'].normalizePath(folder));
+    if (!yearlyNotesFolder) {
+        throw new YearlyNotesFolderMissingError("Failed to find yearly notes folder");
+    }
+    obsidian__default['default'].Vault.recurseChildren(yearlyNotesFolder, (note) => {
+        if (note instanceof obsidian__default['default'].TFile) {
+            const date = getDateFromFile(note, "year");
+            if (date) {
+                const dateString = getDateUID(date, "year");
+                yearlyNotes[dateString] = note;
+            }
+        }
+    });
+    return yearlyNotes;
 }
 
 function appHasDailyNotesPluginLoaded() {
@@ -441,21 +635,61 @@ function appHasDailyNotesPluginLoaded() {
     const periodicNotes = app.plugins.getPlugin("periodic-notes");
     return periodicNotes && periodicNotes.settings?.daily?.enabled;
 }
+/**
+ * XXX: "Weekly Notes" live in either the Calendar plugin or the periodic-notes plugin.
+ * Check both until the weekly notes feature is removed from the Calendar plugin.
+ */
+function appHasWeeklyNotesPluginLoaded() {
+    const { app } = window;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (app.plugins.getPlugin("calendar")) {
+        return true;
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const periodicNotes = app.plugins.getPlugin("periodic-notes");
+    return periodicNotes && periodicNotes.settings?.weekly?.enabled;
+}
+function appHasMonthlyNotesPluginLoaded() {
+    const { app } = window;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const periodicNotes = app.plugins.getPlugin("periodic-notes");
+    return periodicNotes && periodicNotes.settings?.monthly?.enabled;
+}
+function appHasQuarterlyNotesPluginLoaded() {
+    const { app } = window;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const periodicNotes = app.plugins.getPlugin("periodic-notes");
+    return periodicNotes && periodicNotes.settings?.quarterly?.enabled;
+}
+function appHasYearlyNotesPluginLoaded() {
+    const { app } = window;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const periodicNotes = app.plugins.getPlugin("periodic-notes");
+    return periodicNotes && periodicNotes.settings?.yearly?.enabled;
+}
 
 var DEFAULT_DAILY_NOTE_FORMAT_1 = DEFAULT_DAILY_NOTE_FORMAT;
 var DEFAULT_MONTHLY_NOTE_FORMAT_1 = DEFAULT_MONTHLY_NOTE_FORMAT;
+var DEFAULT_QUARTERLY_NOTE_FORMAT_1 = DEFAULT_QUARTERLY_NOTE_FORMAT;
 var DEFAULT_WEEKLY_NOTE_FORMAT_1 = DEFAULT_WEEKLY_NOTE_FORMAT;
+var DEFAULT_YEARLY_NOTE_FORMAT_1 = DEFAULT_YEARLY_NOTE_FORMAT;
 var appHasDailyNotesPluginLoaded_1 = appHasDailyNotesPluginLoaded;
 var createDailyNote_1 = createDailyNote;
 var createMonthlyNote_1 = createMonthlyNote;
+var createQuarterlyNote_1 = createQuarterlyNote;
 var createWeeklyNote_1 = createWeeklyNote;
+var createYearlyNote_1 = createYearlyNote;
 var getAllDailyNotes_1 = getAllDailyNotes;
 var getAllMonthlyNotes_1 = getAllMonthlyNotes;
+var getAllQuarterlyNotes_1 = getAllQuarterlyNotes;
 var getAllWeeklyNotes_1 = getAllWeeklyNotes;
+var getAllYearlyNotes_1 = getAllYearlyNotes;
 var getDailyNote_1 = getDailyNote;
 var getDateFromFile_1 = getDateFromFile;
 var getMonthlyNote_1 = getMonthlyNote;
+var getQuarterlyNote_1 = getQuarterlyNote;
 var getWeeklyNote_1 = getWeeklyNote;
+var getYearlyNote_1 = getYearlyNote;
 
 const wrapAround = (value, size) => {
     return ((value % size) + size) % size;
@@ -545,6 +779,20 @@ const periodConfigs = {
         createNote: createMonthlyNote_1,
         getNote: getMonthlyNote_1,
         getAllNotes: getAllMonthlyNotes_1,
+    },
+    quarterly: {
+        unitOfTime: "quarter",
+        relativeUnit: "this quarter",
+        createNote: createQuarterlyNote_1,
+        getNote: getQuarterlyNote_1,
+        getAllNotes: getAllQuarterlyNotes_1,
+    },
+    yearly: {
+        unitOfTime: "year",
+        relativeUnit: "this year",
+        createNote: createYearlyNote_1,
+        getNote: getYearlyNote_1,
+        getAllNotes: getAllYearlyNotes_1,
     },
 };
 async function openPeriodicNote(periodicity, date, inNewSplit) {
@@ -662,6 +910,18 @@ const calendarMonthIcon = `
 <path d="M51.3075 52.8546C51.3075 54.9201 50.7057 56.6437 49.5022 58.0256C48.2986 59.3926 46.6046 60.3139 44.4204 60.7894V60.9677C47.0356 61.2946 48.9969 62.1118 50.3045 63.4194C51.6121 64.7122 52.2659 66.4358 52.2659 68.5904C52.2659 71.7257 51.1589 74.1477 48.9449 75.8565C46.7309 77.5504 43.5808 78.3974 39.4946 78.3974C35.8838 78.3974 32.8377 77.8105 30.3562 76.6366V71.9783C31.7381 72.6618 33.2018 73.1893 34.7471 73.5608C36.2924 73.9322 37.7784 74.118 39.2048 74.118C41.7309 74.118 43.618 73.6499 44.8661 72.7138C46.1143 71.7777 46.7384 70.3289 46.7384 68.3675C46.7384 66.629 46.0474 65.3511 44.6655 64.5339C43.2836 63.7166 41.1142 63.308 38.1573 63.308H35.3266V59.0509H38.2018C43.4025 59.0509 46.0028 57.2529 46.0028 53.657C46.0028 52.2603 45.5496 51.183 44.6432 50.4252C43.7368 49.6674 42.3995 49.2885 40.6313 49.2885C39.398 49.2885 38.2093 49.4668 37.0651 49.8234C35.921 50.1652 34.5688 50.8412 33.0086 51.8517L30.4454 48.1963C33.4321 45.9972 36.9017 44.8976 40.8542 44.8976C44.138 44.8976 46.7012 45.6034 48.5437 47.015C50.3863 48.4266 51.3075 50.3732 51.3075 52.8546Z" fill="currentColor"/>
 <path d="M69.6199 77.9516H64.382V56.9112C64.382 54.4 64.4415 52.4089 64.5603 50.9378C64.2186 51.2944 63.7951 51.6882 63.2899 52.1191C62.7995 52.55 61.1353 53.9171 58.2972 56.2202L55.6672 52.8992L65.2513 45.3657H69.6199V77.9516Z" fill="currentColor"/>
 </g>
+`;
+const calendarQuarterIcon = `
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.768 3C22.634 3 20.888 4.746 20.888 6.88V10.76H9.24804C7.21104 10.76 5.36804 12.312 5.36804 14.543V92.628C5.36804 93.695 6.04704 94.859 6.82304 95.344C7.59904 95.926 8.37504 96.12 9.24804 96.12H90.728C91.601 96.12 92.377 95.926 93.153 95.344C93.929 94.762 94.608 93.695 94.608 92.628V14.543C94.608 12.506 92.959 10.76 90.922 10.76H79.088V6.88C79.088 4.746 77.342 3 75.208 3H71.328C69.194 3 67.448 4.746 67.448 6.88V10.76H32.528V6.88C32.528 4.746 30.782 3 28.648 3H24.768ZM24.768 6.88H28.648V18.52H24.768V6.88ZM71.328 6.88H75.208V18.52H71.328V6.88ZM9.24804 14.64H20.888V18.52C20.888 20.654 22.634 22.4 24.768 22.4H28.648C30.782 22.4 32.528 20.654 32.528 18.52V14.64H67.448V18.52C67.448 20.654 69.194 22.4 71.328 22.4H75.208C77.342 22.4 79.088 20.654 79.088 18.52V14.64H90.728V28.22H9.24804V14.64ZM9.24804 32.1H90.728V92.24H9.24804V32.1Z" fill="currentColor" stroke="currentColor" stroke-width="0.17"/>
+<path d="M63.2498 61.614C63.2498 65.5665 62.492 68.8949 60.9764 71.5993C59.4756 74.3036 57.2839 76.2056 54.4012 77.3052L62.2022 85.708H55.0253L48.8737 78.3973H48.0044C43.086 78.3973 39.3044 76.9411 36.6595 74.0287C34.0294 71.1015 32.7144 66.9484 32.7144 61.5694C32.7144 56.1904 34.0369 52.0596 36.6818 49.1769C39.3416 46.2943 43.1306 44.853 48.049 44.853C52.893 44.853 56.6375 46.3166 59.2824 49.2438C61.9273 52.171 63.2498 56.2944 63.2498 61.614ZM38.3757 61.614C38.3757 65.6259 39.1855 68.672 40.8052 70.7523C42.4248 72.8177 44.8246 73.8504 48.0044 73.8504C51.1694 73.8504 53.5543 72.8251 55.159 70.7746C56.7787 68.724 57.5885 65.6705 57.5885 61.614C57.5885 57.6169 56.7861 54.5856 55.1813 52.5202C53.5914 50.4548 51.214 49.4221 48.049 49.4221C44.8543 49.4221 42.4397 50.4548 40.8052 52.5202C39.1855 54.5856 38.3757 57.6169 38.3757 61.614Z" fill="currentColor"/>
+</svg>
+`;
+const calendarYearIcon = `
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.768 3C22.634 3 20.888 4.746 20.888 6.88V10.76H9.24804C7.21104 10.76 5.36804 12.312 5.36804 14.543V92.628C5.36804 93.695 6.04704 94.859 6.82304 95.344C7.59904 95.926 8.37504 96.12 9.24804 96.12H90.728C91.601 96.12 92.377 95.926 93.153 95.344C93.929 94.762 94.608 93.695 94.608 92.628V14.543C94.608 12.506 92.959 10.76 90.922 10.76H79.088V6.88C79.088 4.746 77.342 3 75.208 3H71.328C69.194 3 67.448 4.746 67.448 6.88V10.76H32.528V6.88C32.528 4.746 30.782 3 28.648 3H24.768ZM24.768 6.88H28.648V18.52H24.768V6.88ZM71.328 6.88H75.208V18.52H71.328V6.88ZM9.24804 14.64H20.888V18.52C20.888 20.654 22.634 22.4 24.768 22.4H28.648C30.782 22.4 32.528 20.654 32.528 18.52V14.64H67.448V18.52C67.448 20.654 69.194 22.4 71.328 22.4H75.208C77.342 22.4 79.088 20.654 79.088 18.52V14.64H90.728V28.22H9.24804V14.64ZM9.24804 32.1H90.728V92.24H9.24804V32.1Z" fill="currentColor" stroke="currentColor" stroke-width="0.17"/>
+<path d="M49.2303 60.2321L56.9421 45.3656H62.7371L51.8826 65.3139V77.9515H46.5333V65.4922L35.7234 45.3656H41.5184L49.2303 60.2321Z" fill="currentColor"/>
+</svg>
 `;
 
 function showFileMenu(app, settings, position) {
@@ -2057,7 +2317,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (54:4) {#if error}
+// (56:4) {#if error}
 function create_if_block$3(ctx) {
 	let div;
 	let t;
@@ -2235,7 +2495,9 @@ function instance$3($$self, $$props, $$invalidate) {
 	const DEFAULT_FORMATS = {
 		daily: DEFAULT_DAILY_NOTE_FORMAT_1,
 		weekly: DEFAULT_WEEKLY_NOTE_FORMAT_1,
-		monthly: DEFAULT_MONTHLY_NOTE_FORMAT_1
+		monthly: DEFAULT_MONTHLY_NOTE_FORMAT_1,
+		quarterly: DEFAULT_QUARTERLY_NOTE_FORMAT_1,
+		yearly: DEFAULT_YEARLY_NOTE_FORMAT_1
 	};
 
 	const defaultFormat = DEFAULT_FORMATS[periodicity];
@@ -4758,7 +5020,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (27:0) {#if $settingsStore.showGettingStartedBanner}
+// (33:0) {#if $settingsStore.showGettingStartedBanner}
 function create_if_block_1(ctx) {
 	let gettingstartedbanner;
 	let current;
@@ -4799,7 +5061,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (56:2) {#if $settingsStore[periodicity].enabled}
+// (62:2) {#if $settingsStore[periodicity].enabled}
 function create_if_block(ctx) {
 	let div;
 	let noteformatsetting;
@@ -4886,7 +5148,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (36:0) {#each periodicities as periodicity}
+// (42:0) {#each periodicities as periodicity}
 function create_each_block(ctx) {
 	let div4;
 	let div1;
@@ -5137,7 +5399,7 @@ function instance($$self, $$props, $$invalidate) {
 		}));
 	}
 
-	const periodicities = ["daily", "weekly", "monthly"];
+	const periodicities = ["daily", "weekly", "monthly", "quarterly", "yearly"];
 
 	onDestroy(() => {
 		unsubscribeFromSettings();
@@ -5207,6 +5469,8 @@ class PeriodicNotesPlugin extends obsidian.Plugin {
         obsidian.addIcon("calendar-day", calendarDayIcon);
         obsidian.addIcon("calendar-week", calendarWeekIcon);
         obsidian.addIcon("calendar-month", calendarMonthIcon);
+        obsidian.addIcon("calendar-quarter", calendarQuarterIcon);
+        obsidian.addIcon("calendar-year", calendarYearIcon);
     }
     onLayoutReady() {
         // If the user has Calendar Weekly Notes settings, migrate them automatically,
@@ -5228,7 +5492,13 @@ class PeriodicNotesPlugin extends obsidian.Plugin {
     configureRibbonIcons() {
         var _a;
         (_a = this.ribbonEl) === null || _a === void 0 ? void 0 : _a.detach();
-        const configuredPeriodicities = ["daily", "weekly", "monthly"].filter((periodicity) => this.settings[periodicity].enabled);
+        const configuredPeriodicities = [
+            "daily",
+            "weekly",
+            "monthly",
+            "quarterly",
+            "yearly",
+        ].filter((periodicity) => this.settings[periodicity].enabled);
         if (configuredPeriodicities.length) {
             const periodicity = configuredPeriodicities[0];
             const config = periodConfigs[periodicity];
@@ -5243,7 +5513,7 @@ class PeriodicNotesPlugin extends obsidian.Plugin {
     }
     configureCommands() {
         // Remove disabled commands
-        ["daily", "weekly", "monthly"]
+        ["daily", "weekly", "monthly", "quarterly", "yearly"]
             .filter((periodicity) => !this.settings[periodicity].enabled)
             .forEach((periodicity) => {
             getCommands(periodicity).forEach((command) => 
@@ -5251,7 +5521,7 @@ class PeriodicNotesPlugin extends obsidian.Plugin {
             this.app.commands.removeCommand(`periodic-notes:${command.id}`));
         });
         // register enabled commands
-        ["daily", "weekly", "monthly"]
+        ["daily", "weekly", "monthly", "quarterly", "yearly"]
             .filter((periodicity) => this.settings[periodicity].enabled)
             .forEach((periodicity) => {
             getCommands(periodicity).forEach(this.addCommand.bind(this));
@@ -5269,6 +5539,8 @@ class PeriodicNotesPlugin extends obsidian.Plugin {
             daily: Object.assign({}, DEFAULT_SETTINGS),
             weekly: Object.assign({}, DEFAULT_SETTINGS),
             monthly: Object.assign({}, DEFAULT_SETTINGS),
+            quarterly: Object.assign({}, DEFAULT_SETTINGS),
+            yearly: Object.assign({}, DEFAULT_SETTINGS),
         }, settings || {});
     }
     onSettingsUpdate() {

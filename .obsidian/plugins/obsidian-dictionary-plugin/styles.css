@@ -28,3 +28,7 @@ a[href="https://www.buymeacoffee.com/phibr0"]{
     display: flex;
     place-content: center;
 }
+
+.dictionary-view-content{
+    overflow-y: hidden !important;
+}

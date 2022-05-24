@@ -201,5 +201,7 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "notes",
   "vimMode": false,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "legacyEditor": false,
+  "livePreview": true
 }

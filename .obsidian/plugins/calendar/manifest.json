@@ -1,8 +1,8 @@
 {
-  "id": "calendar-beta",
-  "name": "Calendar (Beta)",
+  "id": "calendar",
+  "name": "Calendar",
   "description": "Calendar view of your daily notes",
-  "version": "2.0.0",
+  "version": "1.5.10",
   "author": "Liam Cain",
   "authorUrl": "https://github.com/liamcain/",
   "isDesktopOnly": false,

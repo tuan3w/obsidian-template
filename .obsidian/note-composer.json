@@ -1,4 +1,4 @@
 {
   "askBeforeMerging": true,
-  "template": "notes/templates/Note extraction"
+  "template": "templates/Note extraction"
 }

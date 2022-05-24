@@ -1,9 +1,0 @@
-{
-  "id": "monthly-review-obsidian",
-  "name": "Monthly Review",
-  "version": "1.6.3",
-  "description": "Add a link to the current note to a monthly note.",
-  "author": "tuan3w",
-  "authorUrl": "https://github.com/tuan3w",
-  "isDesktopOnly": false
-}

@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-indent-lines",
+	"name": "Indentation Lines",
+	"version": "1.0.1",
+	"minAppVersion": "0.9.8",
+	"description": "Creates connection-lines for ordered and unordered lists regardless of nesting etc.",
+	"author": "Arch-Storm",
+	"authorUrl": "https://github.com/Arch-Storm",
+	"isDesktopOnly": true
+}

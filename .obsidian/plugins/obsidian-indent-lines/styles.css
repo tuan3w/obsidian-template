@@ -1,0 +1,41 @@
+/* Setting positioning of list-parents to relative to make ::before positioning work properly */
+ul > li, ol > li {
+  position: relative;
+}
+
+ol, ul {
+  position: relative;
+  padding-inline-start: 30px;
+}
+
+/* Actual definition of ::before-pseudo-elements with left border */
+ol > li::before {
+  content: "";
+  position: absolute;
+  height: calc(100% - 2em);
+  top: 1.9em;
+  margin-left: -15px;
+  border-left: 1px solid white;
+  opacity: .5;
+}
+
+ul > li::before {
+  content: "";
+  position: absolute;
+  height: calc(100% - 2em);
+  top: 1.9em;
+  margin-left: -15px;
+  border-left: 1px solid white;
+  opacity: .25;
+}
+
+/* Some settings to fix certain alignment problems   */
+/* works mostly without these but is not recommended */
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section, .markdown-source-view.is-readable-line-width .CodeMirror {
+  line-height: 30px;
+}
