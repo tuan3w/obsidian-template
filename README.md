@@ -41,15 +41,13 @@ There are various templates I often use that you can find in [templates folder](
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview/): Creates automatic lists, tables from our notes.
 ### Taking notes tips
 #### 1. Creating notes
-- Create new Zettelkasten notes when you want to take note about new thing by hot key `Ctrl+Shift+N` and pick a template by using hot key `Ctrl+T`
-- Reformat your note after edit: `Ctrl+Alt+L`
-- Create new refer link to monthly note for later review: `Ctrl+Shift+L`.
+- Create new Zettelkasten notes when you want to take note about new thing by hot key `Ctrl+N` and pick a template by using hot key `Ctrl+T`
 - For books, you might want to add [link to local file](https://forum.obsidian.md/t/how-to-link-a-local-file-in-obsidian/5815) so that you can open book from your note quickly.
 - If you want to add content later,  just add a `todo` tag in the front matter.
+- The note is formatted every time you save your note, thanks to linter plugin.
 #### 2.Review a topic/notes
 
 - Notes are organized by topics. Open search and search for tag you want to review. Press `Ctrl+Tab` to view a random note from your search result.
-- Every month, a monthly note is created under `notes/monthly` folder. You can review list of notes linked to it.
 - Any new note should add a `review` tag and remove it as soon as you think it's good enough. To visit a note that need to be reviewed, enter `Ctrl+R` or exec command `Spaced Repetition: Open a note for review`.
 
 #### 3. Track your reading
@@ -71,6 +69,12 @@ There are various templates I often use that you can find in [templates folder](
 #### 6. Hot keys
 
  I use a number of hot keys to make quick actions. You can see them in `Hotkeys` section in the setting.
+#### 7. Pre-commit
+You may want to compress your image files to keep them in control. In order to do this, you need to install pre-commit hook.
+I use [oxipng](https://github.com/shssoichiro/oxipng) to compress images. So you need to have this package installed in your system. After that, just install pre-commit hook:
+```bash
+pre-commit install
+```
 
  ### Automatic gather our ideas
  I use DataView plugin to create automatic list. For example, you can use DataView to gather all your ideas in one place. See [example](20210903091505 - My thoughts (resource).md).

@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "be85c668cbae1338",
+        "id": "f74e7b0b024cfb36",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/20210903091505 - My thoughts (resource).md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -86,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,9 +116,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md"
-              }
+              "state": {}
             }
           },
           {
@@ -148,7 +141,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -191,7 +183,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -227,17 +218,17 @@
     "width": 340.5,
     "collapsed": true
   },
-  "active": "be85c668cbae1338",
+  "active": "f74e7b0b024cfb36",
   "lastOpenFiles": [
-    "notes/20210903091505 - My thoughts (resource).md",
-    "notes/20210829093439 - Zettelkasten.md",
-    "notes/(Kanban) Reading list.md",
-    "notes/(Kanban) Books.md",
+    "templates/ID.md",
     "notes/uncategorized/20210829094555 - Todo term.md",
+    "README.md",
+    "notes/uncategorized/20221002101404.md",
+    "notes/20210829093439 - Zettelkasten.md",
+    "notes/(Kanban) Books.md",
+    "notes/(Kanban) Reading list.md",
+    "notes/20210903091505 - My thoughts (resource).md",
     "notes/typography/20210829094032 - Typography terms (Resource).md",
-    "notes/typography/20210829093905 - Typeface (typography).md",
-    "notes/typography/20210829093738 - Kerning (typography).md",
-    "notes/thoughts/20210903091900 - (Thought) We should improve our web performance.md",
-    "notes/monthly/2021-09.md"
+    "notes/typography/20210829093905 - Typeface (typography).md"
   ]
 }
