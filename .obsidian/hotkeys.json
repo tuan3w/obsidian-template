@@ -97,9 +97,9 @@
   "templater-obsidian:insert-templater": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
-      "key": "T"
+      "key": "E"
     }
   ],
   "obsidian-linter:lint-file": [
@@ -110,5 +110,9 @@
       ],
       "key": "L"
     }
-  ]
+  ],
+  "table-editor-obsidian:table-control-bar": [],
+  "obsidian-excalidraw-plugin:insert-link-to-element": [],
+  "obsidian-excalidraw-plugin:save": [],
+  "workspace:next-tab": []
 }

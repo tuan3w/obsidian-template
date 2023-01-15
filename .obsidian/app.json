@@ -203,5 +203,10 @@
   "vimMode": false,
   "showLineNumber": false,
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "showInlineTitle": false,
+  "userIgnoreFilters": [
+    "assets/",
+    "templates/"
+  ]
 }

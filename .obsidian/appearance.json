@@ -3,7 +3,7 @@
   "cssTheme": "Minimal",
   "translucency": false,
   "theme": "obsidian",
-  "enabledCssSnippets": [
-    "heading-size"
-  ]
+  "enabledCssSnippets": [],
+  "accentColor": "",
+  "showViewHeader": true
 }

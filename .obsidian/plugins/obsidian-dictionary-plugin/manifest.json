@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-dictionary-plugin",
 	"name": "Dictionary",
-	"version": "2.21.0",
+	"version": "2.22.0",
 	"minAppVersion": "0.12.11",
 	"description": "This is a simple dictionary for the Obsidian Note-Taking Tool.",
 	"author": "phibr0",
