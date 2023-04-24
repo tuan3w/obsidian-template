@@ -19,3 +19,7 @@ body {
 .cm-hmd-frontmatter.cm-atom {
   color: black;
 }
+
+.cm-s-obsidian span.cm-quote {
+  font-style: italic !important;
+}

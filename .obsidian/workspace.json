@@ -11,8 +11,12 @@
             "id": "53d6cf5458dac469",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/typography/20210829093738 - Kerning (typography).md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ">",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 255.5
   },
   "right": {
     "id": "8f5eec4ed7a6a453",
@@ -83,6 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/typography/20210829093738 - Kerning (typography).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "notes/typography/20210829093738 - Kerning (typography).md"
+              }
             }
           },
           {
@@ -118,6 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/typography/20210829093738 - Kerning (typography).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -161,6 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "notes/typography/20210829093738 - Kerning (typography).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
