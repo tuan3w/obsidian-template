@@ -3,7 +3,9 @@
   "cssTheme": "Minimal",
   "translucency": false,
   "theme": "moonstone",
-  "enabledCssSnippets": [],
+  "enabledCssSnippets": [
+    "custom"
+  ],
   "accentColor": "#dd4c4f",
   "showViewHeader": true,
   "interfaceFontFamily": "Inter",

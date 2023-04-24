@@ -1,0 +1,21 @@
+body {
+  caret-color: var(--text-accent) !important;
+
+  --text-selection: #BBD7FB !important;
+}
+
+.list-bullet:after {
+  background-color: #DD4C4FBB;
+}
+
+.list-bullet::hover > :after {
+  background-color: #DD4C4F !important;
+}
+
+.cm-strikethrough {
+  color: #A9B0B3;
+}
+
+.cm-hmd-frontmatter.cm-atom {
+  color: black;
+}

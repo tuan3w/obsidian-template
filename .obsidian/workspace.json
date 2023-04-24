@@ -4,22 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "023ea162eb89c702",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "81085a607b575edc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
+        "id": "07086b3cc525fd8a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "notes/20210903091505 - My thoughts (resource).md",
+            "mode": "source",
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -48,21 +42,13 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dual",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime"
               }
-            }
-          },
-          {
-            "id": "2c391920b7291288",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           },
           {
@@ -73,8 +59,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,14 +89,6 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
-            "id": "82968f8f767f3d36",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           },
           {
@@ -131,24 +108,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "notes/20210903091505 - My thoughts (resource).md"
               }
-            }
-          },
-          {
-            "id": "ee4ec288cf0688d7",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "e2bc756143da0af8",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           },
           {
@@ -157,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -188,7 +149,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 6
       },
       {
         "id": "fb7584ac7010d526",
@@ -201,7 +162,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -248,22 +209,23 @@
       "zk-prefixer:Create new unique note": false,
       "random-note:Open random note": false,
       "workspaces:Manage workspace layouts": false,
-      "periodic-notes:Open this month": false,
       "smart-random-note:Open Random Note from Search": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition:Review flashcards": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "periodic-notes:Open this month": false
     }
   },
-  "active": "fbb5b38869b604a3",
+  "active": "07086b3cc525fd8a",
   "lastOpenFiles": [
+    "notes/20210829093439 - Zettelkasten.md",
+    "notes/Homepage.md",
     "README.md",
     "screenshots/screenshot-1.png",
     "screenshots/screenshot-2.png",
     "screenshots/edit-mode.png",
-    "notes/Homepage.md",
     "screenshots/preview-mode.png",
     "notes/(Kanban) Reading list.md",
     "notes/typography/20210829094032 - Typography terms (Resource).md",
@@ -275,7 +237,6 @@
     "notes/thoughts/20210903091900 - (Thought) We should improve our web performance.md",
     "notes/(Kanban) Books.md",
     "notes/20210903091505 - My thoughts (resource).md",
-    "notes/20210829093439 - Zettelkasten.md",
     "notes/uncategorized/20210829094555 - Todo term.md",
     "notes/books/20210829094933 - (Book) The war of art.md",
     "templates/ID.md",
