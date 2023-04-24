@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "a16b2684de734e8d",
+        "id": "023ea162eb89c702",
         "type": "tabs",
         "children": [
           {
-            "id": "74cdeb723a7ca913",
+            "id": "81085a607b575edc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "dual",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +130,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -149,6 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -171,7 +180,7 @@
             }
           },
           {
-            "id": "7bd22ec8a6ef3b2d",
+            "id": "8ad33520f804ec82",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -192,6 +201,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -238,25 +248,37 @@
       "zk-prefixer:Create new unique note": false,
       "random-note:Open random note": false,
       "workspaces:Manage workspace layouts": false,
+      "periodic-notes:Open this month": false,
       "smart-random-note:Open Random Note from Search": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "periodic-notes:Open this month": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "74cdeb723a7ca913",
+  "active": "fbb5b38869b604a3",
   "lastOpenFiles": [
+    "README.md",
+    "screenshots/screenshot-1.png",
+    "screenshots/screenshot-2.png",
+    "screenshots/edit-mode.png",
+    "notes/Homepage.md",
+    "screenshots/preview-mode.png",
+    "notes/(Kanban) Reading list.md",
+    "notes/typography/20210829094032 - Typography terms (Resource).md",
+    "notes/typography/20210829093905 - Typeface (typography).md",
+    "notes/typography/20210829093738 - Kerning (typography).md",
+    "notes/monthly/2021-08.md",
     "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
+    "notes/monthly/2021-09.md",
+    "notes/thoughts/20210903091900 - (Thought) We should improve our web performance.md",
+    "notes/(Kanban) Books.md",
     "notes/20210903091505 - My thoughts (resource).md",
     "notes/20210829093439 - Zettelkasten.md",
-    "notes/(Kanban) Books.md",
-    "notes/thoughts/20210903091900 - (Thought) We should improve our web performance.md",
+    "notes/uncategorized/20210829094555 - Todo term.md",
     "notes/books/20210829094933 - (Book) The war of art.md",
     "templates/ID.md",
-    "notes/uncategorized/20210829094555 - Todo term.md",
-    "README.md",
     "notes/uncategorized/20221002101404.md"
   ]
 }

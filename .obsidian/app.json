@@ -1,6 +1,6 @@
 {
   "spellcheck": true,
-  "showFrontmatter": true,
+  "showFrontmatter": false,
   "foldIndent": true,
   "spellcheckDictionary": [
     "Lemlist",

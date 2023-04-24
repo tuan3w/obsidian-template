@@ -1,0 +1,18 @@
+{
+  "minimal-style@@blockquote-color@@light": "#0F0F0F",
+  "minimal-style@@blockquote-border-color@@light": "#DD4C4F",
+  "minimal-style@@tag-color@@light": "#FFFFFF",
+  "minimal-style@@tag-background@@light": "#A9B0B3",
+  "minimal-style@@tag-background-hover@@light": "#A9B0B3",
+  "minimal-style@@h1-size": "1.5em",
+  "minimal-style@@h2-size": "1.3em",
+  "minimal-style@@h3-size": "1.125em",
+  "minimal-style@@h4-size": "1.075em",
+  "minimal-style@@tag-border-width": "0",
+  "minimal-style@@tag-color@@dark": "#FFFFFF",
+  "minimal-style@@blockquote-size": "14px",
+  "minimal-style@@blockquote-border-thickness": 2,
+  "minimal-style@@blockquote-font-style": "italic",
+  "minimal-style@@blockquote-background-color@@light": "#F5F5F5",
+  "minimal-style@@tabs-style": "tabs-modern"
+}

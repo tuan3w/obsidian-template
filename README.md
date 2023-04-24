@@ -10,10 +10,9 @@ I would love to share my templates with others, who are interested in learning a
 ## What is inside this template ?
 ### Theme
 - [Obsidian minimal](https://github.com/kepano/obsidian-minimal)
-- Customized Dracula theme
 ### Templates
 There are various templates I often use that you can find in [templates folder](notes/templates).
-- `Term` : can be used to define specific term.  should be short, simple, atomic.
+- `Term` : can be used to define specific term. should be short, simple, atomic.
 - `Resource`: A type of entry notes about any topic, contains many related terms, links about one topic. You can use this as an entry points to explore other concepts in a topic.
 - `Quote File`: Quote said by famous people.
 - `Create Anki Card`: Used to mark a card as anki card. See more details in section bellow.
@@ -22,7 +21,7 @@ There are various templates I often use that you can find in [templates folder](
 - `Thought`: used to capture my ideas.
 - ...
 ### Extensions
-- [Templater](https://github.com/SilentVoid13/Templater):  Template plugin for obsidian
+- [Templater](https://github.com/SilentVoid13/Templater): Template plugin for obsidian
 - [Outliner](https://github.com/vslinko/obsidian-outliner): Work with your lists like Workflowy
 - [Emoji Shortcodes](https://github.com/phibr0/obsidian-emoji-shortcodes) : to add new icon to your notes.
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): Custom style
@@ -32,18 +31,19 @@ There are various templates I often use that you can find in [templates folder](
 - [Note Refactor](https://github.com/lynchjames/note-refactor-obsidian): Refactor notes
 - [Dictionary](https://github.com/phibr0/obsidian-dictionary): Dictionary app
 - [Cycle through Panes](https://github.com/phibr0/cycle-through-panes): Cycle through your open Panes
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography):  Adjust typography styling
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): Adjust typography styling
 - [Linter](https://github.com/platers/obsidian-linter): Fix format errors
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)
 - [Smart Random Note](https://github.com/erichalldev/obsidian-smart-random-note) : Random visit notes from your search result.
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler): rename, merge, search tags from Obsidian tag pane.
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview/): Creates automatic lists, tables from our notes.
+- [Homepage](https://github.com/mirnovov/obsidian-homepage): Custom your home page.
 ### Taking notes tips
 #### 1. Creating notes
 - Create new Zettelkasten notes when you want to take note about new thing by hot key `Ctrl+N` and pick a template by using hot key `Ctrl+T`
 - For books, you might want to add [link to local file](https://forum.obsidian.md/t/how-to-link-a-local-file-in-obsidian/5815) so that you can open book from your note quickly.
-- If you want to add content later,  just add a `todo` tag in the front matter.
+- If you want to add content later, just add a `todo` tag in the front matter.
 - The note is formatted every time you save your note, thanks to linter plugin.
 #### 2.Review a topic/notes
 
@@ -52,7 +52,7 @@ There are various templates I often use that you can find in [templates folder](
 
 #### 3. Track your reading
 
-- I created two Kanban boards to track my regular reading and book reading. I think it really helps when you have multiple things in your reading list.  Again, don't trust your memory.
+- I created two Kanban boards to track my regular reading and book reading. I think it really helps when you have multiple things in your reading list. Again, don't trust your memory.
 
 #### 4. Naming file
 
@@ -64,7 +64,7 @@ There are various templates I often use that you can find in [templates folder](
 
 - Overtime, you will create new cluster of knowledge. You might want to review this topic using better way than visiting them randomly. So [Anki is your friend](https://aliabdaal.com/spaced-repetition/). Creating new anki deck is simple enough:
 	- Add new desk: Add tag about topic in [Spaced repetition plugin setting](https://github.com/st3v3nmw/obsidian-spaced-repetition). I prefer this approach more than turning folder name into deck name because it provides more better control.
-	- Add new card: I only used [multiple-line card style](https://github.com/st3v3nmw/obsidian-spaced-repetition/wiki/Flashcard-Types#multi-line-basic) . I choose  `[ ](#anki-card)`  as separator because it's invisible in preview mode.  To add separator, just use template `Create Anki Card` to insert the separator after the first heading of the note. By default, `Term` card is an anki card.
+	- Add new card: I only used [multiple-line card style](https://github.com/st3v3nmw/obsidian-spaced-repetition/wiki/Flashcard-Types#multi-line-basic) . I choose `[ ](#anki-card)` as separator because it's invisible in preview mode. To add separator, just use template `Create Anki Card` to insert the separator after the first heading of the note. By default, `Term` card is an anki card.
 
 #### 6. Hot keys
 
@@ -89,11 +89,9 @@ pre-commit install
  ![stats](stats.png)
 ### Screenshots
 
-- Edit mode:
-![edit-mode](./screenshots/edit-mode.png)
+![img1](./screenshots/screenshot-1.png)
 
-- Preview mode:
-![preview-mode](./screenshots/preview-mode.png)
+![preview-mode](./screenshots/screenshot-2.png)
 
 ## FAQs
 

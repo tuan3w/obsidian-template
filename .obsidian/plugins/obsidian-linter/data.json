@@ -1,98 +1,115 @@
 {
   "ruleConfigs": {
-    "Format Tags in YAML": {
-      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": false
-    },
-    "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
-      "Text to insert": "aliases: \ntags: "
-    },
-    "YAML Timestamp": {
-      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
-      "Date Created": true,
-      "Date Created Key": "created_date",
-      "Date Modified": true,
-      "Date Modified Key": "updated_date",
-      "Format": "DD/MM/yyyy"
-    },
-    "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
-      "Title Key": "title"
-    },
-    "Header Increment": {
-      "Heading levels should only increment by one level at a time": false
-    },
-    "File Name Heading": {
-      "Inserts the file name as a H1 heading if no H1 heading exists.": false
-    },
-    "Capitalize Headings": {
-      "Headings should be formatted with capitalization": false,
-      "Style": "Title Case",
-      "Ignore Cased Words": true,
-      "Ignore Words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
-      "Lowercase Words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
-    },
-    "Move Footnotes to the bottom": {
-      "Move all footnotes to the bottom of the document.": false
-    },
-    "Re-Index Footnotes": {
-      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
-    },
-    "Footnote after Punctuation": {
-      "Ensures that footnote references are placed after punctuation, not before.": false
-    },
-    "Remove Multiple Spaces": {
-      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": true
-    },
-    "Remove Hyphenated Line Breaks": {
-      "Removes hyphenated line breaks. Useful when pasting text from textbooks.": false
-    },
-    "Remove Consecutive List Markers": {
-      "Removes consecutive list markers. Useful when copy-pasting list items.": false
-    },
-    "Remove Empty List Markers": {
-      "Removes empty list markers, i.e. list items without content.": false
-    },
-    "Convert Bullet List Markers": {
-      "Converts common bullet list marker symbols to markdown list markers.": false
-    },
-    "Proper Ellipsis": {
-      "Replaces three consecutive dots with an ellipsis.": false
-    },
-    "Trailing spaces": {
-      "Removes extra spaces after every line.": true,
-      "Two Space Linebreak": false
-    },
-    "Heading blank lines": {
-      "All headings have a blank line both before and after (except where the heading is at the beginning or end of the document).": false,
-      "Bottom": true
-    },
-    "Paragraph blank lines": {
-      "All paragraphs should have exactly one blank line both before and after.": false
-    },
-    "Space after list markers": {
-      "There should be a single space after list markers and checkboxes.": false
-    },
-    "Compact YAML": {
-      "Removes leading and trailing blank lines in the YAML front matter.": true
-    },
-    "Consecutive blank lines": {
-      "There should be at most one consecutive blank line.": true
-    },
-    "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": true,
-      "Tabsize": "4"
-    },
-    "Line Break at Document End": {
-      "Ensures that there is exactly one line break at the end of a document.": true
-    },
     "Space between Chinese and English or numbers": {
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
+    },
+    "format-tags-in-yaml": {
+      "enabled": false
+    },
+    "insert-yaml-attributes": {
+      "enabled": false,
+      "text-to-insert": "aliases: \ntags: "
+    },
+    "yaml-timestamp": {
+      "enabled": true,
+      "date-created": true,
+      "date-created-key": "created_date",
+      "force-retention-of-create-value": false,
+      "date-modified": true,
+      "date-modified-key": "updated_date",
+      "format": "DD/MM/yyyy"
+    },
+    "yaml-title": {
+      "enabled": false,
+      "title-key": "title"
+    },
+    "capitalize-headings": {
+      "enabled": false,
+      "style": "Title Case",
+      "ignore-case-words": true,
+      "ignore-words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
+      "lowercase-words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
+    },
+    "file-name-heading": {
+      "enabled": false
+    },
+    "header-increment": {
+      "enabled": false,
+      "start-at-h2": false
+    },
+    "footnote-after-punctuation": {
+      "enabled": false
+    },
+    "move-footnotes-to-the-bottom": {
+      "enabled": false
+    },
+    "re-index-footnotes": {
+      "enabled": false
+    },
+    "convert-bullet-list-markers": {
+      "enabled": false
+    },
+    "proper-ellipsis": {
+      "enabled": false
+    },
+    "remove-consecutive-list-markers": {
+      "enabled": false
+    },
+    "remove-empty-list-markers": {
+      "enabled": false
+    },
+    "remove-hyphenated-line-breaks": {
+      "enabled": false
+    },
+    "remove-multiple-spaces": {
+      "enabled": true
+    },
+    "compact-yaml": {
+      "enabled": true,
+      "inner-new-lines": false
+    },
+    "consecutive-blank-lines": {
+      "enabled": true
+    },
+    "convert-spaces-to-tabs": {
+      "enabled": true,
+      "tabsize": "4"
+    },
+    "heading-blank-lines": {
+      "enabled": false,
+      "bottom": true,
+      "empty-line-after-yaml": true
+    },
+    "line-break-at-document-end": {
+      "enabled": true
+    },
+    "paragraph-blank-lines": {
+      "enabled": false
+    },
+    "space-after-list-markers": {
+      "enabled": false
+    },
+    "trailing-spaces": {
+      "enabled": true,
+      "twp-space-line-break": false
     }
   },
   "lintOnSave": true,
+  "recordLintOnSaveLogs": false,
   "displayChanged": false,
+  "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [
     "templates"
-  ]
+  ],
+  "linterLocale": "system-default",
+  "logLevel": 4,
+  "lintCommands": [],
+  "customRegexes": [],
+  "commonStyles": {
+    "aliasArrayStyle": "single-line",
+    "tagArrayStyle": "single-line",
+    "minimumNumberOfDollarSignsToBeAMathBlock": 2,
+    "escapeCharacter": "\"",
+    "removeUnnecessaryEscapeCharsForMultiLineArrays": false
+  }
 }

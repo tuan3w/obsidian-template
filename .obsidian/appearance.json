@@ -1,9 +1,12 @@
 {
-  "baseFontSize": 18,
+  "baseFontSize": 16,
   "cssTheme": "Minimal",
   "translucency": false,
-  "theme": "obsidian",
+  "theme": "moonstone",
   "enabledCssSnippets": [],
-  "accentColor": "",
-  "showViewHeader": true
+  "accentColor": "#dd4c4f",
+  "showViewHeader": true,
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Avenir",
+  "monospaceFontFamily": "Avenir"
 }
