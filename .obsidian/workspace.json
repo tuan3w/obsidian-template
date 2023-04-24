@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "07086b3cc525fd8a",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "notes/20210903091505 - My thoughts (resource).md",
-            "mode": "source",
-            "source": false
+        "id": "0b33ee389bfa9a3c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d6cf5458dac469",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
@@ -42,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": ">",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,7 +61,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -80,7 +83,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,9 +109,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md"
-              }
+              "state": {}
             }
           },
           {
@@ -118,7 +118,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +161,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "notes/20210903091505 - My thoughts (resource).md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -218,10 +216,12 @@
       "periodic-notes:Open this month": false
     }
   },
-  "active": "07086b3cc525fd8a",
+  "active": "53d6cf5458dac469",
   "lastOpenFiles": [
-    "notes/20210829093439 - Zettelkasten.md",
+    "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
+    "notes/typography/20210829093738 - Kerning (typography).md",
     "notes/Homepage.md",
+    "notes/20210829093439 - Zettelkasten.md",
     "README.md",
     "screenshots/screenshot-1.png",
     "screenshots/screenshot-2.png",
@@ -230,9 +230,7 @@
     "notes/(Kanban) Reading list.md",
     "notes/typography/20210829094032 - Typography terms (Resource).md",
     "notes/typography/20210829093905 - Typeface (typography).md",
-    "notes/typography/20210829093738 - Kerning (typography).md",
     "notes/monthly/2021-08.md",
-    "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
     "notes/monthly/2021-09.md",
     "notes/thoughts/20210903091900 - (Thought) We should improve our web performance.md",
     "notes/(Kanban) Books.md",

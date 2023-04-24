@@ -11,7 +11,7 @@
   "minimal-style@@tag-border-width": "0",
   "minimal-style@@tag-color@@dark": "#FFFFFF",
   "minimal-style@@blockquote-size": "14px",
-  "minimal-style@@blockquote-border-thickness": 2,
+  "minimal-style@@blockquote-border-thickness": 4,
   "minimal-style@@blockquote-font-style": "italic",
   "minimal-style@@blockquote-background-color@@light": "#F5F5F5",
   "minimal-style@@tabs-style": "tabs-modern"
