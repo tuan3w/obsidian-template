@@ -4,6 +4,10 @@ body {
   --text-selection: #BBD7FB !important;
 }
 
+.is-flashing,.search-result-file-matched-text {
+  background-color: #F4E952 !important;
+}
+
 .list-bullet:after {
   background-color: #DD4C4FBB;
 }
