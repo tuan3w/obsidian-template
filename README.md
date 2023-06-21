@@ -11,7 +11,7 @@ I would love to share my templates with others, who are interested in learning a
 ### Theme
 - [Obsidian minimal](https://github.com/kepano/obsidian-minimal)
 ### Templates
-There are various templates I often use that you can find in [templates folder](notes/templates).
+There are various templates I often use that you can find in [templates folder](templates).
 - `Term` : can be used to define specific term. should be short, simple, atomic.
 - `Resource`: A type of entry notes about any topic, contains many related terms, links about one topic. You can use this as an entry points to explore other concepts in a topic.
 - `Quote File`: Quote said by famous people.
