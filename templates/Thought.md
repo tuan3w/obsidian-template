@@ -5,7 +5,7 @@ updated_date: <% tp.file.creation_date('DD/MM/YYYY') %>
 type: thought
 ---
 
-#  {{title}}
+# <% tp.file.title %>
 - **🏷️Tags** :  #<% tp.file.creation_date('MM-YYYY') %> #thought
 [ ](#anki-card)
 ## 📝 Notes

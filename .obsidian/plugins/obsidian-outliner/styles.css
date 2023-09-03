@@ -1,14 +1,13 @@
-/* lists */
+/* lists and bullets */
 .outliner-plugin-better-lists .cm-s-obsidian .HyperMD-list-line {
   padding-top: 0.4em;
 }
 
-/* bullets */
-.outliner-plugin-better-bullets .cm-formatting-list-ul {
+.outliner-plugin-better-lists .cm-formatting-list-ul {
   margin-right: 0.3em;
 }
 
-.outliner-plugin-better-bullets .list-bullet::after {
+.outliner-plugin-better-lists .list-bullet::after {
   width: 0.4em;
   height: 0.4em;
   background-color: var(--text-muted);
@@ -71,8 +70,13 @@
 }
 
 /* drag-n-drop */
-.outliner-plugin-dragging-line {
+.outliner-plugin-dropping-line {
   background-color: hsla(var(--interactive-accent-hsl), 0.4);
+}
+
+.outliner-plugin-dragging-line {
+  opacity: 0.5;
+  background-color: hsla(var(--interactive-accent-hsl), 0.2);
 }
 
 .outliner-plugin-drop-zone {
@@ -84,12 +88,9 @@
   pointer-events: none;
 }
 
-.outliner-plugin-drop-zone-before {
-  margin-top: -8px;
-}
-
-.outliner-plugin-drop-zone-after {
-  margin-top: -1px;
+.outliner-plugin-drop-zone-padding {
+  position: absolute;
+  height: 4px;
 }
 
 body.outliner-plugin-dnd:not(.outliner-plugin-dragging) .cm-formatting-list,

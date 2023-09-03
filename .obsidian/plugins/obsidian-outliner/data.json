@@ -1,1 +1,13 @@
-{"styleLists":true,"debug":false,"stickCursor":true,"betterEnter":true,"selectAll":true,"disableZoomNotification":false}
+{
+  "styleLists": true,
+  "debug": false,
+  "stickCursor": true,
+  "betterEnter": true,
+  "betterTab": true,
+  "selectAll": true,
+  "listLines": false,
+  "listLineAction": "toggle-folding",
+  "dnd": true,
+  "previousRelease": "4.8.0",
+  "disableZoomNotification": false
+}

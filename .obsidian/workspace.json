@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0b33ee389bfa9a3c",
+        "id": "41e1c33e6481b0f0",
         "type": "tabs",
         "children": [
           {
-            "id": "53d6cf5458dac469",
+            "id": "9125bace14c2f916",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/typography/20210829093738 - Kerning (typography).md",
+                "file": "notes/Homepage.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "d92da12c156699cc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
@@ -87,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/typography/20210829093738 - Kerning (typography).md",
+                "file": "notes/Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/typography/20210829093738 - Kerning (typography).md"
+                "file": "notes/Homepage.md"
               }
             }
           },
@@ -125,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/typography/20210829093738 - Kerning (typography).md",
+                "file": "notes/Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -148,7 +156,7 @@
             }
           },
           {
-            "id": "8ad33520f804ec82",
+            "id": "053243a5e3aaf2e4",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -169,7 +177,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "notes/typography/20210829093738 - Kerning (typography).md",
+                "file": "notes/Homepage.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -217,16 +225,17 @@
       "random-note:Open random note": false,
       "workspaces:Manage workspace layouts": false,
       "smart-random-note:Open Random Note from Search": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
+      "periodic-notes:Open this month": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-spaced-repetition:Review flashcards": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "homepage:Open homepage": false,
-      "periodic-notes:Open this month": false
+      "homepage:Open homepage": false
     }
   },
-  "active": "53d6cf5458dac469",
+  "active": "053243a5e3aaf2e4",
   "lastOpenFiles": [
+    "templates/daily/Daily Note  - System.md",
     "notes/books/20210829094148 - (Book) Range - Why Generalists Triumph in a Specialized World.md",
     "notes/typography/20210829093738 - Kerning (typography).md",
     "notes/Homepage.md",

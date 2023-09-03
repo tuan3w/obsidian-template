@@ -54,7 +54,7 @@
   background-color: var(--interactive-accent) !important;
   color: var(--text-on-accent);
   padding: 4px 9px !important;
-  max-width: 200px !important;
+  max-width: 100% !important;
   border: 1px solid var(--background-modifier-border);
   border-radius: 8px 8px 2px 2px;
   border-bottom: 0px;
@@ -150,4 +150,32 @@ textarea.full-width {
   min-height: 10em;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
+}
+
+/**
+* Custom regex replacement
+*/
+.linter-custom-regex-replacement-container div:last-child{
+  border: none;
+}
+.linter-custom-regex-replacement {
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: var(--hr-thickness) solid;
+  border-color: var(--hr-color);
+}
+.linter-custom-regex-replacement-row2 {
+  flex-wrap: wrap;
+}
+.linter-custom-regex-replacement-normal-input {
+  width: 40%;
+}
+.linter-custom-regex-replacement-flags {
+  width: 15%;
+}
+.linter-custom-regex-replacement-label {
+  flex-direction: row-reverse;
+}
+.linter-custom-regex-replacement-label-input {
+  width: 50%;
 }

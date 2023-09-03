@@ -21,29 +21,33 @@
   display: none;
 }
 
-img.excalidraw-embedded-img {
+.excalidraw-embedded-img {
   width: 100%;
 }
 
-img.excalidraw-svg-right-wrap {
+.excalidraw-svg-right-wrap {
   float: right;
   margin: 0px 0px 20px 20px;
+  width: 100%;
 }
 
-img.excalidraw-svg-left-wrap {
+.excalidraw-svg-left-wrap {
   float: left;
   margin: 0px 35px 20px 0px;
+  width: 100%;
 }
 
-img.excalidraw-svg-right {
+.excalidraw-svg-right {
   float: right;
 }
 
 .excalidraw-svg-center {
   text-align: center;
+  margin: auto;
+  width: 100%;
 }
 
-img.excalidraw-svg-left {
+.excalidraw-svg-left {
   float: left;
 }
 
@@ -99,6 +103,10 @@ li[data-testid] {
   border: 0 !important;
   box-shadow: 0 !important;
   background-color: transparent !important;
+} 
+
+.excalidraw .popover {
+  position: fixed !important;
 }
 
 .disable-zen-mode--visible {
@@ -340,4 +348,70 @@ div.excalidraw-draginfo {
   background: var(--color-base-40);
   display: block;
   border-radius: 5px;
+}
+
+.excalidraw [data-radix-popper-content-wrapper] {
+  position: absolute !important;
+}
+
+.excalidraw__embeddable-container .view-header {
+  display: none !important;
+}
+
+.excalidraw__embeddable-container input {
+  background: initial;
+}
+
+.excalidraw .HelpDialog__key {
+  background-color: var(--color-gray-80) !important;
+}
+
+.excalidraw .embeddable-menu {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    display: block;
+    z-index: var(--zIndex-layerUI);
+}
+
+.excalidraw .welcome-screen-center__logo svg {
+  width: 5rem !important;
+}
+
+.excalidraw-image-wrapper {
+  text-align: center;
+}
+
+.excalidraw-image-wrapper img {
+  margin: auto;
+}
+
+.modal-content.excalidraw-scriptengine-install .search-bar-wrapper {
+  position: sticky;
+  top: 1em;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+  z-index: 10;
+  background: var(--background-secondary);
+  padding: 0.5em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  float: right;
+  max-width: 28em;
+}
+
+.modal-content.excalidraw-scriptengine-install .hit-count {
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+
+.modal-content.excalidraw-scriptengine-install .active-highlight {
+  border: 2px solid var(--color-accent-2);
+  background-color: var(--color-accent);
+}
+
+.excalidraw-svg svg a {
+  text-decoration: none;
 }

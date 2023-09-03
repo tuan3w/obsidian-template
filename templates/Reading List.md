@@ -5,7 +5,7 @@ updated_date: <% tp.file.creation_date('DD/MM/YYYY') %>
 type: reading_list
 ---
 
-# 📑 {{title}}
-- **🏷️Tags** :  #<% tp.file.creation_date('MM-YYYY') %> #reading_list 
+# 📑 <% tp.file.title %>
+- **🏷️Tags** :  #<% tp.file.creation_date('MM-YYYY') %> #reading-list 
 ## 🔗 Links
 - [ ] 

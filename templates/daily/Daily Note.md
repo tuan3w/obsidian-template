@@ -5,9 +5,9 @@ updated_date: <% tp.file.creation_date('DD/MM/YYYY') %>
 type: daily-note
 ---
 
-# {{title}}
+# <% tp.file.title %>
 - **🏷️Tags** : #<% tp.file.creation_date("MM-YYYY") %> #daily 
 ## Links
-- 
+- [ ] 
 ## Thoughts
 - 
