@@ -19,6 +19,7 @@
 			- [8. Auto note organizer](#8-auto-note-organizer)
 			- [9. Automatic gather our ideas](#9-automatic-gather-our-ideas)
 			- [10. Stats tracking (optional)](#10-stats-tracking-optional)
+			- [11. Question documents with Khoj](#11-question-documents-with-khoj)
 		- [Screenshots](#screenshots)
 	- [FAQs](#faqs)
 	- [License](#license)
@@ -121,6 +122,11 @@ in the plugin settings.
 
  It will add all the new notes, update note stats, generate a picture of your progress and create new commit with your message. Your stats will look like this:
  ![stats](stats.png)
+
+#### 11. Question documents with Khoj
+
+You may have many documents that you want to read, but not have time to review them yet. You can use [Khoj](https://github.com/khoj-ai/khoj) to search and chat with your documents. For example, when I want to read a paper, I will create a note with the paper attached inside the note.
+
 ### Screenshots
 
 ![img1](./screenshots/screenshot-1.png)
