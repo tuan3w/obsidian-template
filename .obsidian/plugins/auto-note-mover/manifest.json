@@ -1,0 +1,10 @@
+{
+	"id": "auto-note-mover",
+	"name": "Auto Note Mover",
+	"version": "1.2.0",
+	"minAppVersion": "0.12.0",
+	"description": "Auto Note Mover will automatically move the active notes to their respective folders according to the rules.",
+	"author": "faru",
+	"authorUrl": "https://github.com/farux/",
+	"isDesktopOnly": false
+}

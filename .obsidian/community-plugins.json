@@ -22,5 +22,7 @@
   "obsidian-linter",
   "obsidian-minimal-settings",
   "obsidian-style-settings",
-  "homepage"
+  "homepage",
+  "auto-note-mover",
+  "khoj"
 ]

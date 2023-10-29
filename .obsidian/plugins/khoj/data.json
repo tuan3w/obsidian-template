@@ -1,0 +1,9 @@
+{
+  "enableOfflineChat": true,
+  "resultsCount": 6,
+  "khojUrl": "http://127.0.0.1:42110",
+  "connectedToBackend": true,
+  "autoConfigure": true,
+  "openaiApiKey": "",
+  "lastSyncedFiles": []
+}

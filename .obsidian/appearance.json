@@ -2,10 +2,8 @@
   "baseFontSize": 16,
   "cssTheme": "Minimal",
   "translucency": false,
-  "theme": "moonstone",
-  "enabledCssSnippets": [
-    "custom"
-  ],
+  "theme": "#dd4c4f",
+  "enabledCssSnippets": [],
   "accentColor": "#dd4c4f",
   "showViewHeader": true,
   "interfaceFontFamily": "Inter",

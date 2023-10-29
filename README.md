@@ -1,6 +1,31 @@
 # Obsidian-template
 
-My personal templates for [Obsidian](https://obsidian.md).
+<!-- TOC -->
+
+- [Obsidian-template](#obsidian-template)
+	- [Motivation](#motivation)
+	- [What is inside this template ?](#what-is-inside-this-template-)
+		- [Theme](#theme)
+		- [Templates](#templates)
+		- [Extensions](#extensions)
+		- [Taking notes tips](#taking-notes-tips)
+			- [1. Creating notes](#1-creating-notes)
+			- [2.Review a topic/notes](#2review-a-topicnotes)
+			- [3. Track your reading](#3-track-your-reading)
+			- [4. Naming file](#4-naming-file)
+			- [5. Anki card](#5-anki-card)
+			- [6. Hot keys](#6-hot-keys)
+			- [7. Pre-commit](#7-pre-commit)
+			- [8. Auto note organizer](#8-auto-note-organizer)
+			- [9. Automatic gather our ideas](#9-automatic-gather-our-ideas)
+			- [10. Stats tracking (optional)](#10-stats-tracking-optional)
+		- [Screenshots](#screenshots)
+	- [FAQs](#faqs)
+	- [License](#license)
+
+<!-- /TOC -->
+
+
 
 ## Motivation
 
@@ -39,6 +64,9 @@ There are various templates I often use that you can find in [templates folder](
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler): rename, merge, search tags from Obsidian tag pane.
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview/): Creates automatic lists, tables from our notes.
 - [Homepage](https://github.com/mirnovov/obsidian-homepage): Custom your home page.
+- [Auto Note Mover](https://github.com/farux/obsidian-auto-note-mover): Auto organize notes by tags.
+- [Khoj](https://github.com/khoj-ai/khoj): An AI copilot for your second brain. Search and chat with your personal knowledge base, online or offline.
+
 ### Taking notes tips
 #### 1. Creating notes
 - Create new Zettelkasten notes when you want to take note about new thing by hot key `Ctrl+N` and pick a template by using hot key `Ctrl+T`
@@ -76,10 +104,16 @@ I use [oxipng](https://github.com/shssoichiro/oxipng) to compress images. So you
 pre-commit install
 ```
 
- ### Automatic gather our ideas
- I use DataView plugin to create automatic list. For example, you can use DataView to gather all your ideas in one place. See [example](20210903091505 - My thoughts (resource).md).
+#### 8. Auto note organizer
+
+I use [Auto Note Mover](https://github.com/farux/obsidian-auto-note-mover) to auto organize my notes. It's really helpful when you have a lot of notes. Just add tag to your note and it will be moved to the folder you specify
+in the plugin settings.
+![Auto Note Mover](./screenshots/screenshot-3.png)
+
+ #### 9. Automatic gather our ideas
+ I use DataView plugin to create automatic list. For example, you can use DataView to gather all your ideas in one place. See [example](./notes/20210903091505%20-%20My%20thoughts%20(resource).md).
  However, the downside of this approach is that the all the links won't be displayed in graph view. So you might consider manual linking if you need that.
-### Stats tracking (optional)
+#### 10. Stats tracking (optional)
  I also provide some [script](./update_stats.py) to update your reading stats (how many notes you have taken over time). Everytime you want to update git, just run command:
  ```bash
  $ ./update your message without quote here
