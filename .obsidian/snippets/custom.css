@@ -1,11 +1,15 @@
 body {
-  caret-color: var(--text-accent) !important;
+  caret-color: #DD4C4F !important;
 
   --text-selection: #BBD7FB !important;
+  --code-background: #F3F5F7 !important;
+  --text-highlight-bg: #DCFEAD !important;
+  --tag-color: #444444 !important;
+  --tag-background: #E5E5E6 !important;
+  --text-normal: #444444 !important;
 }
-
-.is-flashing,.search-result-file-matched-text {
-  background-color: #F4E952 !important;
+* + * {
+  caret-color: #DD4C4F !important;
 }
 
 .list-bullet:after {
@@ -24,6 +28,10 @@ body {
   color: black;
 }
 
-.cm-s-obsidian span.cm-quote {
-  font-style: italic !important;
+.cm-formatting.cm-strong,.cm-formatting.cm-formatting-em {
+  color: #D9DAD9 !important;
+}
+
+.cm-formatting.cm-hashtag {
+  color: #878887 !important;
 }
