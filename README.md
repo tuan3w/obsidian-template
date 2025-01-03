@@ -3,26 +3,28 @@
 <!-- TOC -->
 
 - [Obsidian-template](#obsidian-template)
-	- [Motivation](#motivation)
-	- [What is inside this template ?](#what-is-inside-this-template-)
-		- [Theme](#theme)
-		- [Templates](#templates)
-		- [Extensions](#extensions)
-		- [Taking notes tips](#taking-notes-tips)
-			- [1. Creating notes](#1-creating-notes)
-			- [2.Review a topic/notes](#2review-a-topicnotes)
-			- [3. Track your reading](#3-track-your-reading)
-			- [4. Naming file](#4-naming-file)
-			- [5. Anki card](#5-anki-card)
-			- [6. Hot keys](#6-hot-keys)
-			- [7. Pre-commit](#7-pre-commit)
-			- [8. Auto note organizer](#8-auto-note-organizer)
-			- [9. Automatic gather our ideas](#9-automatic-gather-our-ideas)
-			- [10. Stats tracking (optional)](#10-stats-tracking-optional)
-			- [11. Question documents with Khoj](#11-question-documents-with-khoj)
-		- [Screenshots](#screenshots)
-	- [FAQs](#faqs)
-	- [License](#license)
+  - [Motivation](#motivation)
+  - [What is inside this template ?](#what-is-inside-this-template-)
+    - [Theme](#theme)
+    - [Templates](#templates)
+    - [Extensions](#extensions)
+    - [Taking notes tips](#taking-notes-tips)
+      - [1. Creating notes](#1-creating-notes)
+      - [2.Review a topic/notes](#2review-a-topicnotes)
+      - [3. Track your reading](#3-track-your-reading)
+      - [4. Naming file](#4-naming-file)
+      - [5. Anki card](#5-anki-card)
+      - [6. Hot keys](#6-hot-keys)
+      - [8. Auto note organizer](#8-auto-note-organizer)
+      - [9. Automatic gather our ideas](#9-automatic-gather-our-ideas)
+      - [10. Stats tracking (optional)](#10-stats-tracking-optional)
+      - [11. Question documents with Khoj](#11-question-documents-with-khoj)
+      - [12. Automatically Title New Links](#12-automatically-title-new-links)
+      - [13. Image Converter for Obsidian](#13-image-converter-for-obsidian)
+      - [14. Web clipper templates](#14-web-clipper-templates)
+    - [Screenshots](#screenshots)
+  - [FAQs](#faqs)
+  - [License](#license)
 
 <!-- /TOC -->
 
@@ -67,6 +69,7 @@ There are various templates I often use that you can find in [templates folder](
 - [Homepage](https://github.com/mirnovov/obsidian-homepage): Custom your home page.
 - [Auto Note Mover](https://github.com/farux/obsidian-auto-note-mover): Auto organize notes by tags.
 - [Khoj](https://github.com/khoj-ai/khoj): An AI copilot for your second brain. Search and chat with your personal knowledge base, online or offline.
+- [Obsidian Image Converter](https://github.com/xryul/obsidian-image-converter): Convert image to webp to save space.
 
 ### Taking notes tips
 #### 1. Creating notes
@@ -98,12 +101,7 @@ There are various templates I often use that you can find in [templates folder](
 #### 6. Hot keys
 
  I use a number of hot keys to make quick actions. You can see them in `Hotkeys` section in the setting.
-#### 7. Pre-commit
-You may want to compress your image files to keep them in control. In order to do this, you need to install pre-commit hook.
-I use [oxipng](https://github.com/shssoichiro/oxipng) to compress images. So you need to have this package installed in your system. After that, just install pre-commit hook:
-```bash
-pre-commit install
-```
+
 
 #### 8. Auto note organizer
 
@@ -126,6 +124,20 @@ in the plugin settings.
 #### 11. Question documents with Khoj
 
 You may have many documents that you want to read, but not have time to review them yet. You can use [Khoj](https://github.com/khoj-ai/khoj) to search and chat with your documents. For example, when I want to read a paper, I will create a note with the paper attached inside the note.
+
+#### 12. Automatically Title New Links
+
+This plugin will automatically fetches the webpage to extract link titles when they're pasted, creating a markdown link with the correct title set.
+
+#### 13. Image Converter for Obsidian
+
+This [plugin](https://github.com/xRyul/obsidian-image-converter) will convert to image to webp to save space.
+
+#### 14. Web clipper templates
+
+I use several templates to capture web content that I think it might be useful for me to review later. You can see them in [web-clipper](./templates/web-clipper/) folder.
+You can import them from web clipper extension's setting. You can your favorite LLMs to help you summarize the content, generate suitable hashtags, etc.
+![web clipper](./screenshots/web-clipper.png)
 
 ### Screenshots
 

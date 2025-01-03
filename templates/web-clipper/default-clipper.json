@@ -1,0 +1,36 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Default",
+	"behavior": "create",
+	"noteContentFormat": "# {{date|date:YYYYMMDDHHmmss}} - {{title|capitalize}} \n- **🏷️Tags** : #{{date|date:MM-YYYY}} #clippings {{\"Generate up to 10 hashtags summarizing the content of this page. Each hashtag must start with a #, use only lowercase letters, `-` to separate words in multi-word hashtags (i.e #my-hashtag-name). Ensure one hashtag represents the domain itself (e.g., #example-domain), while the others focus on unique and specific aspects of the page's content. Include 1-2 general category hashtags to broadly classify the content, such as #technology or #health. Be creative and prioritize originality, ensuring the hashtags are distinct and useful for discovering related topics. Output the hashtags as a single space-separated string.\"}}\n\n## Notes\n\n{{\"Analyze the content of the page and begin by providing a concise overview of its main topic and key arguments. Explain why this topic might be important or interesting to someone wanting to learn about it. Following the overview, create detailed notes in bullet points, presented sequentially from the beginning to the end of the page. Focus on extracting key concepts, important information, and insights that are crucial for understanding the topic. Include any particularly insightful or memorable quotes as markdown block quotes, with a short explanation of why each quote is particularly insightful or helpful for understanding the topic. Include links if needed.\"}}\n",
+	"properties": [
+		{
+			"name": "type",
+			"value": "post",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "link",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created_date",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "updated_date",
+			"value": "{{date}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{date|date:YYYYMMDDHHmmss}} - (Post) {{title|replace:(\":\":\" - \",\"/\":\" - \")|capitalize}} ",
+	"path": "notes/clippings"
+}

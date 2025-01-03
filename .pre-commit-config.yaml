@@ -1,9 +1,0 @@
-repos:
--   repo: local
-    hooks:
-    -   id: oxipng
-        name: Compressing images 
-        entry: oxipng
-        language: system
-        types: [png]
-
