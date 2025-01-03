@@ -136,8 +136,9 @@ This [plugin](https://github.com/xRyul/obsidian-image-converter) will convert to
 #### 14. Web clipper templates
 
 I use several templates to capture web content that I think it might be useful for me to review later. You can see them in [web-clipper](./templates/web-clipper/) folder.
-You can import them from web clipper extension's setting. You can your favorite LLMs to help you summarize the content, generate suitable hashtags, etc.
-![web clipper](./screenshots/web-clipper.png)
+You can import them from [web clipper extension](https://obsidian.md/clipper)'s setting. You can your favorite LLMs to help you summarize the content, generate suitable hashtags, etc.
+
+ <img src="./screenshots/web-clipper.png" alt="alt text" width="300" >
 
 ### Screenshots
 
