@@ -1,5 +1,7 @@
 # Obsidian-template
 
+> **Note:** This template is no longer actively maintained. Things are changing — I now believe Claude Code is all you need. Obsidian's [file over app](https://stephango.com/file-over-app) philosophy works great for AI agents like Claude Code. Your notes are just files, and agents can read, write, and reason over them directly. In my vault, I built custom agents and skills using [claudian](https://github.com/YishenTu/claudian) — a Claude Code plugin for Obsidian vaults. If you're interested in this direction, explore that.
+
 <!-- TOC -->
 
 - [Obsidian-template](#obsidian-template)
